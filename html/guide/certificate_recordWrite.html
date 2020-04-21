@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일산차병원</title>
+
+    <meta name="description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다.">
+    <meta property="og:description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다." />
+    <link rel="shortcut icon" type="image/x-icon" href="../../asset/img/cha.ico">
+    <!-- <meta property="og:image" content="../../asset/img/og_image.jpg"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="일산차병원" />
+    <meta property="og:site_name" content="일산차병원" />
+    <!-- <meta property="og:url" content="http://ilsan.chamc.co.kr" />
+    <link rel="canonical" href="http://ilsan.chamc.co.kr"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../asset/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/NotoSansKR-Hestia.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/mCustomScrollbar.css" />
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+    <script language="JavaScript" type='text/javascript' src="../../asset/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/script.js"></script>
+    <script type="text/javascript" src="../../asset/js/program.js"></script>
+    <script type="text/javascript" src="../../asset/js/index.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="../../asset/js/slick.js"></script>
+    <script type="text/javascript" src="../../asset/js/scroll.js"></script>
+    <script type="text/javascript" src="../../asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/getComputedStyle.js"></script>
+    <script type="text/javascript" src="../../asset/js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/main.js"></script>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../asset/css/ie8.css" />
+        <script language="JavaScript" type='text/javascript' src="../../asset/js/poly-checked.min.js"></script>
+        <script type="text/javascript" src="../../asset/js/excanvas.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../../asset/js/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        $(document).ready(function () {
+            if (!$("#cbOutPatient").is(":checked")) {
+                $("#tbOutPatient input").prop("disabled", true);
+                $("#tbOutPatient textarea").prop("disabled", true);
+            }
+
+            if (!$("#cbInPatient").is(":checked")) {
+                $("#tbInPatient input").prop("disabled", true);
+                $("#tbInPatient textarea").prop("disabled", true);
+            }
+            
+            $("#cbOutPatient ,#cbInPatient").change(function () {
+                if ($(this).is(":checked")) {
+                    $(this).parents(".popup_line_box_con").find("input").not(".txtEtc").prop("disabled", false);
+                    $(this).parents(".popup_line_box_con").find("textarea").prop("disabled", false);
+                    $(this).prop("disabled", false);
+                } else {
+                    $(this).parents(".popup_line_box_con").find("input").not(".txtEtc").prop("disabled", true);
+                    $(this).parents(".popup_line_box_con").find("textarea").prop("disabled", true);
+                    $(this).prop("disabled", false);
+                }
+            });
+
+            $(".datepicker").datepicker({
+                showOn: "button",
+                buttonImage: "../../asset/img/icon_cal.png",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--popup_div-->
+    <div class="popup_div">
+        <div class="popup_area">
+            <div class="popup_title_area">
+                의무기록사본 발급 신청
+                <a href="#none" class="popup_close"></a>
+            </div>
+            
+            <div class="popup_con">
+                <div class="recordW_wrap">
+                    <div class="popup_line_box">
+                        <div class="popup_line_box_title">신청인 정보<span class="right"><em>*</em> 필수입력항목 입니다.</span></div>
+                        <div class="popup_line_box_con">
+                            <div class="popup_table_wrap">
+                                <div class="table_area">
+                                    <table class="table_type03">
+                                        <colgroup>
+                                            <col style="width: 110px;" />
+                                            <col style="width: *;" />
+                                            <col style="width: 110px;" />
+                                            <col style="width: 300px;" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>이름 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area w300">
+                                                        <input type="text" readonly value="홍길동"/>
+                                                    </div>
+                                                </td>
+                                                <th>생년월일 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area ">
+                                                        <input name="txtBirth" type="text" maxlength="6" id="txtBirth">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>E-mail <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area w300">
+                                                        <input name="txtEmail" type="text" value="chamc@chamc.co.kr" maxlength="50" id="txtEmail" />
+                                                    </div>
+                                                </td>
+                                                <th>신청목적 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <div class="search_area">                                                            
+                                                            <select name="ddlDescription">
+                                                                <option value="보험회사 제출용">보험회사 제출용</option>
+                                                                <option value="타병원 제출용">타병원 제출용</option>
+                                                                <option value="공단제출용">공단제출용</option>
+                                                                <option value="직장/학교 제출용">직장/학교 제출용</option>
+                                                                <option value="개인보관용">개인보관용</option>
+                                                                <option value="기타">기타</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>휴대전화 <span class="essential">*</span></th>
+                                                <td colspan="3">
+                                                    <div class="input_array select_wrap">
+                                                        <div class="input_area">
+                                                            <div class="search_area">
+                                                                <select>
+                                                                    <option value="selectNumber">번호선택</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dash">-</div>
+                                                        <div class="input_area">
+                                                            <input type="text" maxlength="4">
+                                                        </div>
+                                                        <div class="dash">-</div>
+                                                        <div class="input_area">
+                                                            <input type="text" maxlength="4">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>기타 연락처 <span class="essential">*</span></th>
+                                                <td colspan="3">
+                                                    <div class="input_array select_wrap">
+                                                        <div class="input_area">
+                                                            <div class="search_area">
+                                                                <select>
+                                                                    <option value="selectNumber">번호선택</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dash">-</div>
+                                                        <div class="input_area">
+                                                            <input type="text" maxlength="4">
+                                                        </div>
+                                                        <div class="dash">-</div>
+                                                        <div class="input_area">
+                                                            <input type="text" maxlength="4">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>환자와의 관계 <span class="essential">*</span></th>
+                                                <td colspan="3">
+                                                    <div class="input_area">
+                                                        <div class="input_radio">
+                                                            <input type="radio" name="rbRelation" id="rbI">
+                                                            <label for="rbI">환자본인</label>
+                                                        </div>
+                                                        <div class="input_radio">
+                                                            <input type="radio" name="rbRelation" id="rbP">
+                                                            <label for="rbP">부모</label>
+                                                        </div>
+                                                        <div class="input_radio">
+                                                            <input type="radio" name="rbRelation" id="rbS">
+                                                            <label for="rbS">배우자</label>
+                                                        </div>
+                                                        <div class="input_radio">
+                                                            <input type="radio" name="rbRelation" id="rbD">
+                                                            <label for="rbD">형제</label>
+                                                        </div>
+                                                        <div class="input_radio">
+                                                            <input type="radio" name="rbRelation" id="rbC">
+                                                            <label for="rbC">자녀</label>
+                                                        </div>
+                                                        <div class="input_radio">
+                                                            <input type="radio" name="rbRelation" id="rbE">
+                                                            <label for="rbE">보험회사직원</label>
+                                                        </div>
+                                                        <div class="input_radio">
+                                                            <input type="radio" name="rbRelation" id="rbZ">
+                                                            <label for="rbZ">기타</label>
+                                                        </div>                                                        
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="popup_line_box">
+                        <div class="popup_line_box_title">환자 정보</div>
+                        <div class="popup_line_box_con">
+                            <div class="popup_table_wrap">
+                                <div class="table_area">
+                                    <table class="table_type03">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col style="width: *;">
+                                            <col style="width: 110px;">
+                                            <col style="width: 300px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>환자명 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area w300">
+                                                        <input name="txtPatName" type="text" maxlength="20" id="txtPatName" />
+                                                    </div>
+                                                </td>
+                                                <th>환자등록번호 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_search_area">
+                                                        <div class="input_area">
+                                                            <input name="txtPatNo" type="text" maxlength="8" id="txtPatNo" />
+                                                        </div>
+                                                        <a class="btn_search">조회</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matter_area">
+                        <ul class="matter_list">
+                            <li>
+                                개정된 개인정보보호법에 의하여 주민번호의 수집이 불가하오니 환자등록번호가 기억나지 않으시면 내원하여 발급 신청 해주세요.
+                            </li>
+                            <li class="point">초진환자의 환자번호는 확인되지 않습니다. (초진환자번호 Z로 시작함)</li>
+                        </ul>
+                    </div>
+
+                    <div class="popup_line_box">
+                        <div class="popup_line_box_title">신청 정보</div>
+                        <div class="popup_line_box_con">
+                            <div class="popup_table_wrap">
+                                <div class="table_area">
+                                    <table class="table_type03">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col style="width: *;">
+                                            <col style="width: 110px;">
+                                            <col style="width: 300px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>사본수령희망일 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="date_wp w300">
+                                                        <input name="txtDate" type="text" id="txtDate" class="datepicker">
+                                                    </div>
+                                                </td>
+                                                <th>신청부수 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <div class="search_area">
+                                                            <select id="ddlCopy" class="select_area">
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>진료과 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area w300">
+                                                        <div class="search_area">
+                                                            <select name="ddlPCode" class="select_area" >
+                                                                <option selected="selected" value="">진료과선택</option>
+                                                                <option value="ALL">전체진료과</option>
+                                                                <option value="IMMD">내과</option>
+                                                                <option value="GIMD">소화기내과</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <th>의료진 <span class="essential">*</span></th>
+                                                <td>
+                                                    <div class="input_area">
+                                                        <div class="search_area">
+                                                            <select name="ddlDoctor" class="select_area">
+                                                                <option value="">의료진선택</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup_line_box_con">
+                            <div class="popup_line_box_title no_line" style="height:auto;">
+                                <div class="input_check">
+                                    <input type="checkbox" id="cbOutPatient" class="check_d">
+                                    <label for="cbOutPatient"><strong>외래</strong></label>
+                                </div>
+                            </div>
+                            <div class="popup_table_wrap">
+                                <div class="table_area">
+                                    <table class="table_type03" id="tbOutPatient">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col style="width: *;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>외래 기간 조회</th>
+                                                <td>
+                                                    <div class="date_wp fl" style="width:145px;">
+                                                        <input name="txtDate" type="text" id="txtDate2" class="datepicker">
+                                                    </div>
+                                                    <div class="date_wp fl ml10" style="width:145px;">
+                                                        <input name="txtDate" type="text" id="txtDate3" class="datepicker">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="box_gray">
+                                                        <div class="checkWrap">
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut1" class="check_d"><label for="cbOut1">초진기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut2" class="check_d"><label for="cbOut2">MRI검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut3" class="check_d"><label for="cbOut3">초음파검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut4" class="check_d"><label for="cbOut4">진단검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut5" class="check_d"><label for="cbOut5">응급실 기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut6" class="check_d"><label for="cbOut6">MRI검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut7" class="check_d"><label for="cbOut7">진단검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut8" class="check_d"><label for="cbOut8">방사선 검사 결과지 (X-ray,심전도,mammography 등)</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut9" class="check_d"><label for="cbOut9">조직검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbOut10" class="check_d"><label for="cbOut10">내시경검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check w100">
+                                                                <input type="checkbox" id="cbOut11" class="check_d"><label for="cbOut11">기타기록지</label>
+                                                                <input name="cbOut11" type="text" id="cbOut11" placeholder="20자 이내" />
+                                                            </div>
+                                                            <div class="chLine input_check w100">
+                                                                <input type="checkbox" id="cbOut12" class="check_d"><label for="cbOut12">전체기록지</label>
+                                                                <span class="point">* 전체기록지 복사시 분량에 따라 비용이 많이 발생될 수 있습니다. </span>
+                                                            </div>
+                                                        </div>                 
+                                                        <div class="checkWrap textareaWrap">
+                                                            <span>비고</span>
+                                                            <textarea name="txtOutComment" rows="2" cols="20" id="txtOutComment" placeholder="100자 이내 진료기록지 외 각종 진단서, 소견서, 증명서, CD카피, 영수증 등은 신청하실 수 없습니다."></textarea>
+                                                        </div> 
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup_line_box_con">
+                            <div class="popup_line_box_title no_line" style="height:auto;">
+                                <div class="input_check">
+                                    <input type="checkbox" id="cbInPatient" class="check_d">
+                                    <label for="cbInPatient"><strong>입원</strong></label>
+                                </div>
+                            </div>
+                            <div class="popup_table_wrap">
+                                <div class="table_area">
+                                    <table class="table_type03" id="tbInPatient">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col style="width: *;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>입원 기간 조회</th>
+                                                <td>
+                                                    <div class="date_wp fl" style="width:145px;">
+                                                        <input name="txtDate4" type="text" id="txtDate4" class="datepicker">
+                                                    </div>
+                                                    <div class="date_wp fl ml10" style="width:145px;">
+                                                        <input name="txtDate5" type="text" id="txtDate5" class="datepicker">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="box_gray">
+                                                        <div class="checkWrap">
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn1" class="check_d"><label for="cbIn1">입퇴원기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn2" class="check_d"><label for="cbIn2">진단검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn3" class="check_d"><label for="cbIn3">퇴원요약지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn4" class="check_d"><label for="cbIn4">조직검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn5" class="check_d"><label for="cbIn5">입원기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn6" class="check_d"><label for="cbIn6">초음파검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn7" class="check_d"><label for="cbIn7">경과기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn8" class="check_d"><label for="cbIn8">CT검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn9" class="check_d"><label for="cbIn9">수술기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn10" class="check_d"><label for="cbIn10">MRI검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn11" class="check_d"><label for="cbIn11">기타기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn12" class="check_d"><label for="cbIn12">방사선 검사 결과지 (X-ray,심전도,mammography 등)</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn13" class="check_d"><label for="cbIn13">응급실기록지</label>
+                                                            </div>
+                                                            <div class="chLine input_check">
+                                                                <input type="checkbox" id="cbIn14" class="check_d"><label for="cbIn14">내시경검사 결과지</label>
+                                                            </div>
+                                                            <div class="chLine input_check w100">
+                                                                <input type="checkbox" id="cbIn15" class="check_d"><label for="cbIn15">기타기록지</label>
+                                                                <input name="cbIn15" type="text" id="cbIn15" placeholder="20자 이내" />
+                                                            </div>
+                                                            <div class="chLine input_check w100">
+                                                                <input type="checkbox" id="cbIn16" class="check_d"><label for="cbIn16">전체기록지</label>
+                                                                <span class="point">* 전체기록지 복사시 분량에 따라 비용이 많이 발생될 수 있습니다. </span>
+                                                            </div>
+                                                        </div>                 
+                                                        <div class="checkWrap textareaWrap">
+                                                            <span>비고</span>
+                                                            <textarea name="txtOutComment" rows="2" cols="20" id="txtOutComment" placeholder="100자 이내 진료기록지 외 각종 진단서, 소견서, 증명서, CD카피, 영수증 등은 신청하실 수 없습니다."></textarea>
+                                                        </div> 
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup_line_box_con">
+                            <div class="popup_table_wrap">
+                                <div class="table_area">
+                                    <table class="table_type03">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col style="width: *;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>비밀번호</th>
+                                                <td>
+                                                    <div class="input_area w300">
+                                                        <input name="txtPwd" type="password" maxlength="10" id="txtPwd">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="matter_area">
+                        <ul class="matter_list">
+                            <li><b>문의</b> 의료정보팀 031-000-0000 (평일 08:30~17:30, 토·일·공휴일 08:30~12:30)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <a href="#none" class="btn_ok">신청하기</a>
+                <a href="#none" class="frameClose">다시입력하기</a>
+            </div>
+        </div>
+    </div>
+    <!--//popup_div-->
+</body>
+</html>

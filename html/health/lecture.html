@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일산차병원</title>
+
+    <meta name="description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다.">
+    <meta property="og:description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다." />
+    <link rel="shortcut icon" type="image/x-icon" href="../../asset/img/cha.ico">
+    <!-- <meta property="og:image" content="../../asset/img/og_image.jpg"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="일산차병원" />
+    <meta property="og:site_name" content="일산차병원" />
+    <!-- <meta property="og:url" content="http://ilsan.chamc.co.kr" />
+    <link rel="canonical" href="http://ilsan.chamc.co.kr"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../asset/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/NotoSansKR-Hestia.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/mCustomScrollbar.css" />
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+    <script language="JavaScript" type='text/javascript' src="../../asset/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/script.js"></script>
+    <script type="text/javascript" src="../../asset/js/program.js"></script>
+    <script type="text/javascript" src="../../asset/js/index.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="../../asset/js/slick.js"></script>
+    <script type="text/javascript" src="../../asset/js/scroll.js"></script>
+    <script type="text/javascript" src="../../asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/getComputedStyle.js"></script>
+    <script type="text/javascript" src="../../asset/js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/main.js"></script>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../asset/css/ie8.css" />
+        <script language="JavaScript" type='text/javascript' src="../../asset/js/poly-checked.min.js"></script>
+        <script type="text/javascript" src="../../asset/js/excanvas.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../../asset/js/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        $(function(){
+            $("div[includeHTML]").each(function () { $(this).load($(this).attr("includeHTML"));});/*html inlude시에 넣은거라 개발시 삭제해주세요.*/
+            
+            // $("#spanDate").html($("#ctl00_ContentPlaceHolder1_hfYear").val() + "." + $("#ctl00_ContentPlaceHolder1_hfMonth").val());
+        });
+
+        function fnMoveDetail(type) {
+
+            var vYY = $("#ctl00_ContentPlaceHolder1_hfYear").val();
+            var vMM = $("#ctl00_ContentPlaceHolder1_hfMonth").val();
+
+            if (type == "before") {
+                vMM--;
+                if (vMM == 0) {
+                    vYY--;
+                    vMM = 12;
+                }
+            } else {
+                vMM++;
+                if (vMM == 13) {
+                    vYY++;
+                    vMM = 1;
+                }
+            }
+            location.href = '?yy=' + vYY + '&mm=' + vMM;
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div includeHTML="/asset/include/header.html"></div>
+
+        <!-- contents wrap -->
+        <div class="contents_wrap health">
+            <!-- path_wrap -->
+            <div class="path_wrap">
+                <div class="path_area">
+                    <div class="path_left">
+                        <a href="/" class="home"></a>
+                        <div class="path">
+                            <a href="javascript:;"><span>건강정보</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료예약·상담</a></li>
+                                <li><a href="javascript:void(0)">진료과·의료진</a></li>
+                                <li><a href="javascript:void(0)">이용안내</a></li>
+                                <li class="current"><a href="javascript:void(0)">건강정보</a></li class="current">
+                                <li><a href="javascript:void(0)">120 웰니스</a></li>
+                            </ul>
+                        </div>
+                        <div class="path">
+                            <a href="javascript:;"><span>진료과·의료진 찾기</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료과·의료진 찾기</a></li>
+                                <li><a href="javascript:void(0)">쉬운 진료과 찾기</a></li>
+                                <li><a href="javascript:void(0)">진료과별 FAQ</a></li>
+                                <li><a href="javascript:void(0)">진료안내상담</a></li>
+                            </ul>
+                        </div>
+                        <div class="path">
+                            <a href="javascript:;"><span>진료과 리스트</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료과 리스트</a></li>
+                                <li><a href="javascript:void(0)">센터 리스트</a></li>
+                                <li><a href="javascript:void(0)">클리닉 리스트</a></li>
+                            </ul>
+                        </div>
+                        <div class="path last">
+                            <a href="javascript:;"><span>산부인과</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">산부인과</a></li>
+                                <li><a href="javascript:void(0)">내과</a></li>
+                                <li><a href="javascript:void(0)">외과</a></li>
+                                <li><a href="javascript:void(0)">소아청소년과</a></li>
+                                <li><a href="javascript:void(0)">비뇨의학과</a></li>
+                                <li><a href="javascript:void(0)">정신건강의학과</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="path_right">
+                        <a href="javascript:;"class="path_clinic"></a>
+                        <div class="path_share">
+                            <a href="javascript:;"><span></span></a>
+                            <div>
+                                <p>공유하기</p>
+                                <a href="javascript:void(0)" class="first"><img src="/asset/img/icon_f.png" alt="페이스북"></a>
+                                <a href="javascript:void(0)"><img src="/asset/img/icon_b.png" alt="블로그"></a>
+                                <a href="javascript:void(0)"><img src="/asset/img/icon_k.png" alt=카카오톡></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //path_wrap -->
+
+            <!-- contents_menu_wrap -->
+            <div class="contents_menu_wrap">
+                <div class="sub_visual_wrap">
+                    <div class="svisual_wp">
+                        <ul>
+                            <li class="on on1"><img src="/asset/img/pattern_01.png" alt=""></li>
+                            <li class="on on2"><img src="/asset/img/pattern_02.png" alt=""></li>
+                            <li class="on on3"><img src="/asset/img/pattern_03.png" alt=""></li>
+                            <li class="on on4"><img src="/asset/img/pattern_04.png" alt=""></li>
+                            <li class="on on5"><img src="/asset/img/pattern_05.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="contents_menu_area">
+                        <a href="#" target="_self" class="prev_menu">건강한 출산 A to Z<span></span></a>
+                        <h1 class="current_menu">건강강좌</h1>
+                        <a href="#" target="_self" class="next_menu">건강라이프 칼럼<span></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- //contents_menu_wrap -->
+
+            <!-- top tab -->
+            <div class="top_tab_wrap">
+                <div class="top_tab_area">
+                    <ul class="top_tab_list list04">
+                        <li class="on"><a href="lectureure.html" target="_self">이달의 건강강좌</a></li>
+                        <li><a href="lectureure_motherSchedule.html" target="_self">산모대학 무료공개강좌</a></li>
+                        <li><a href="lectureure_lamaze.html" target="_self">라마즈분만교실</a></li>
+                        <li><a href="lectureure_couple.html" target="_self">부부분만교실</a></li>
+                        <li><a href="lectureure_breastfeeding.html" target="_self">모유수유교실</a></li>
+                        <li><a href="lectureure_massage.html" target="_self">아기 마사지교실</a></li>
+                        <li><a href="lectureure_babyCare.html" target="_self">모우수유와 신생아돌보기</a></li>
+                        <li><a href="lectureure_babyFood.html" target="_self">이유식교육</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //top tab -->
+
+            <!-- contents -->
+            <div class="contents_area">
+                <h2>이달의 건강강좌</h2>
+                <p class="tac mb20" style="font-size:26px; color:#f00;">※ 3~4월 건강강좌는 코로나19 감염증 예방차원으로<br>일시적으로 휴강되었습니다.</p>
+                <div class="health_wrap">
+                    <div id="schedule">
+                        <div id="day_wrap">
+                            <div class="day">
+                                <a href="javascript:fnMoveDetail('before')"><span class="arrow_left"></span></a>
+                                <span class="number" id="spanDate">2020.1</span>
+                                <a href="javascript:fnMoveDetail('after')"><span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                        <table id="ctl00_ContentPlaceHolder1_tblCalendar" cellspacing="0" cellpadding="0" summary="#" class="schedule_table" style="border-collapse:collapse;">
+                            <tr>
+                                <th class="red">일요일</th>
+                                <th>월요일</th>
+                                <th>화요일</th>
+                                <th>수요일</th>
+                                <th>목요일</th>
+                                <th>금요일</th>
+                                <th class="blue">토요일</th>
+                            </tr>
+                            <tr>
+                                <td><span class='before'>29</span></td>
+                                <td><span class='before'>30</span></td>
+                                <td><span class='before'>31</span></td>
+                                <td><span class="red">1</span></td>
+                                <td><span>2</span></td>
+                                <td><span>3</span>
+                                    <a href="">
+                                        <div class="ilsanL01"><span>모유수유와 신생아 돌보기</span></div>
+                                    </a>
+                                    <a href="">
+                                        <div class="ilsanL02"><span>부부 분만</span></div>
+                                    </a>
+                                </td>
+                                <td class="blue"><span>4</span></td>
+                            </tr>
+                            <tr>
+                                <td class="red"><span>5</span></td>
+                                <td><span>6</span></td>
+                                <td><span>7</span></td>
+                                <td><span>8</span>
+                                    <a href="">
+                                        <div class="ilsanL03"><span>모유 수유</span></div>
+                                    </a>
+                                    <a href="">
+                                        <div class="ilsanL04"><span>이유식 교육</span></div>
+                                    </a>
+                                </td>
+                                <td><span>9</span>
+                                    <a href="">
+                                        <div class="ilsanL05"><span>아기마사지</span></div>
+                                    </a>
+                                    <a href="">
+                                        <div class="ilsanL07"><span>라마즈 분만교실</span></div>
+                                    </a>
+                                </td>
+                                <td><span>10</span></td>
+                                <td class="blue"><span>11</span></td>
+                            </tr>
+                            <tr>
+                                <td class="red"><span>12</span></td>
+                                <td><span>13</span></td>
+                                <td><span>14</span></td>
+                                <td><span>15</span></td>
+                                <td><span>16</span></td>
+                                <td><span>17</span></td>
+                                <td class="blue"><span>18</span></td>
+                            </tr>
+                            <tr>
+                                <td class="red"><span>19</span></td>
+                                <td><span>20</span></td>
+                                <td><span>21</span></td>
+                                <td><span>22</span></td>
+                                <td><span>23</span></td>
+                                <td><span>24</span></td>
+                                <td class="blue"><span>25</span></td>
+                            </tr>
+                            <tr>
+                                <td class="red"><span>26</span></td>
+                                <td><span >27</span></td>
+                                <td><span>28</span></td>
+                                <td><span>29</span></td>
+                                <td><span>30</span></td>
+                                <td><span>31</span></td>
+                                <td><span class='before'>1</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class='before'>2</span></td>
+                                <td><span class='before'>3</span></td>
+                                <td><span class='before'>4</span></td>
+                                <td><span class='before'>5</span></td>
+                                <td><span class='before'>6</span></td>
+                                <td><span class='before'>7</span></td>
+                                <td><span class='before'>8</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- //contents -->
+        </div>
+        <!-- //contents wrap -->
+
+        <div includeHTML="/asset/include/footer.html"></div>
+    </div>
+</body>
+</html>

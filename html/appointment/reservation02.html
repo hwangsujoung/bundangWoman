@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일산차병원</title>
+
+    <meta name="description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다.">
+    <meta property="og:description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다." />
+    <link rel="shortcut icon" type="image/x-icon" href="../../asset/img/cha.ico">
+    <!-- <meta property="og:image" content="../../asset/img/og_image.jpg"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="일산차병원" />
+    <meta property="og:site_name" content="일산차병원" />
+    <!-- <meta property="og:url" content="http://ilsan.chamc.co.kr" />
+    <link rel="canonical" href="http://ilsan.chamc.co.kr"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../asset/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/NotoSansKR-Hestia.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/mCustomScrollbar.css" />
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+    <script language="JavaScript" type='text/javascript' src="../../asset/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/script.js"></script>
+    <script type="text/javascript" src="../../asset/js/program.js"></script>
+    <script type="text/javascript" src="../../asset/js/index.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="../../asset/js/slick.js"></script>
+    <script type="text/javascript" src="../../asset/js/scroll.js"></script>
+    <script type="text/javascript" src="../../asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/getComputedStyle.js"></script>
+    <script type="text/javascript" src="../../asset/js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/main.js"></script>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../asset/css/ie8.css" />
+        <script language="JavaScript" type='text/javascript' src="../../asset/js/poly-checked.min.js"></script>
+        <script type="text/javascript" src="../../asset/js/excanvas.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../../asset/js/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        $(function(){
+            $(".popup_line_box.double").click(function () {
+                var vIndex = $(this).index() + 1;
+                console.log(vIndex);
+                $(".popup_line_box.double").removeClass("on");
+                $(this).addClass("on");
+
+                for (var i = 1 ; i < 3; i++) {
+                    if (vIndex == i) {
+                        $(".divTabContent0" + i).show();
+                    } else {
+                        $(".divTabContent0" + i).hide();
+                    }
+                }
+                $("#divPartList").find("input").prop("checked", false);
+            });
+        })
+    </script>
+</head>
+<body>
+    <!--popup_div-->
+    <div class="popup_div">
+        <div class="popup_area">
+            <div id="divStep02"  class="reserve_wrap">
+                <div class="popup_title_area popup_title_area2">
+                    예약하기
+                    <a href="#none" class="popup_close"></a>
+                </div>
+
+                <div class="popup_con">
+                    <div class="step_wrap">
+                        <div class="step_btn_area list03">
+                            <div class="on"><p><strong>STEP1</strong> 진료과·의료진 선택</p></div>
+                            <div><p><strong>STEP2</strong> 일정선택</p></div>
+                            <div><p><strong>STEP3</strong> 환자 정보입력 및 예약확인</p></div>
+                        </div>
+
+                        <div class="step_con_area">
+                            <div class="step_con on">
+                                <div class="popup_link_title_box">
+                                    <div class="popup_line_box double on">
+                                        <div class="popup_line_box_title">
+                                            진료과 선택
+                                        </div>
+                                    </div>
+                                    <div class="popup_line_box double">
+                                        <div class="popup_line_box_title">
+                                            의료진 검색
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divTabContent01 popup_line_box no_line mt0">
+                                    <div class="input_radio_area" id="divPartList">
+                                        <div class="input_radio">
+                                            <input type="radio" name="rbPartList" id="rdMd_1">
+                                            <label for="rdMd_1">난임센터</label>
+                                        </div>
+                                        <div class="input_radio">
+                                            <input type="radio" name="rbPartList" id="rdMd_2">
+                                            <label for="rdMd_2">산부인과</label>
+                                        </div>
+                                        <div class="input_radio">
+                                            <input type="radio" name="rbPartList" id="rdMd_3">
+                                            <label for="rdMd_3">산부인과3</label>
+                                        </div>
+                                        <div class="input_radio">
+                                            <input type="radio" name="rbPartList" id="rdMd_4">
+                                            <label for="rdMd_4">산부인과4</label>
+                                        </div>
+                                        <div class="input_radio">
+                                            <input type="radio" name="rbPartList" id="rdMd_5">
+                                            <label for="rdMd_5">산부인과5</label>
+                                        </div>
+                                        <div class="input_radio">
+                                            <input type="radio" name="rbPartList" id="rdMd_6">
+                                            <label for="rdMd_6">산부인6</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divTabContent02 popup_line_box no_line mt0">
+                                    <p>찾으시는 의료진명을 입력해 주세요.</p>
+                                    <div class="search_wrap">
+                                        <div class="search_area">
+                                            <div class="input_area search_input">
+                                                <input id="txtDoctorKeyword" type="text" class="fl faq_input">
+                                                <a id="aDoctorKeyword" class="btn_search">검색</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divTabContent01 popup_line_box">
+                                <div class="popup_line_box_title">의료진 선택</div>
+                                <div class="popup_line_box_con no_line">
+                                    <div class="doctor_list_area" >
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divTabContent02 popup_line_box">
+                                <div class="popup_line_box_title">의료진 검색결과[<b class="point">1</b>건]</div>
+                                <div class="popup_line_box_con no_line">
+                                    <div class="doctor_list_area">
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                        <div class="doctor_list">
+                                            <div class="pic_area">
+                                                <img src="/asset/img/online_doctor_test.png" alt="곽인평교수 " title="곽인평교수 " onerror="this.src='../asset/img/staff_blank.jpg'">
+                                            </div>
+                                            <div class="doctor_list_con_area">
+                                                <div class="doctor_name">
+                                                    <strong>권성원  교수</strong>
+                                                    <a href="" class="btn_profile" target="_blank">프로필</a>
+                                                </div>
+                                                <div class="professional">난임 및 시험관아기 시술 난임 및 시험관 아기 시술 난임 및 시험관</div>
+                                            </div>
+                                            <div class="schedule_area">
+                                                <dl class="schedule">
+                                                    <dt>오전</dt>
+                                                    <dd>화,수,금</dd>
+                                                </dl>
+                                                <dl class="schedule">
+                                                    <dt>오후</dt>
+                                                    <dd></dd>
+                                                </dl>
+                                            </div>
+                                            <a href="#none" title="" id="" class="btn_reservation">진료예약</a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="table_wrap">
+                                        <div class="search_none">                                        
+                                            <b class="title">진료 가능한 의료진이 없습니다.</b>
+                                            <span class="desc">
+                                                * 단어의 철자나 맞춤법이 정확한지 다시 한번 확인해주세요.
+                                            </span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//popup_div-->
+</body>
+</html>

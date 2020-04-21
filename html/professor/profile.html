@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일산차병원</title>
+
+    <meta name="description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다.">
+    <meta property="og:description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다." />
+    <link rel="shortcut icon" type="image/x-icon" href="../../asset/img/cha.ico">
+    <!-- <meta property="og:image" content="../../asset/img/og_image.jpg"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="일산차병원" />
+    <meta property="og:site_name" content="일산차병원" />
+    <!-- <meta property="og:url" content="http://ilsan.chamc.co.kr" />
+    <link rel="canonical" href="http://ilsan.chamc.co.kr"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../asset/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/NotoSansKR-Hestia.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/mCustomScrollbar.css" />
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+    <script language="JavaScript" type='text/javascript' src="../../asset/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/script.js"></script>
+    <script type="text/javascript" src="../../asset/js/program.js"></script>
+    <script type="text/javascript" src="../../asset/js/index.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="../../asset/js/slick.js"></script>
+    <script type="text/javascript" src="../../asset/js/scroll.js"></script>
+    <script type="text/javascript" src="../../asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/getComputedStyle.js"></script>
+    <script type="text/javascript" src="../../asset/js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/main.js"></script>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../asset/css/ie8.css" />
+        <script language="JavaScript" type='text/javascript' src="../../asset/js/poly-checked.min.js"></script>
+        <script type="text/javascript" src="../../asset/js/excanvas.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../../asset/js/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        function articleTiles() {
+            // Prepare layout options.
+            var options = {
+                autoResize: true, // This will auto-update the layout when the browser window is resized.
+                container: $('.article'), // Optional, used for some extra CSS styling
+                offset: 16, // Optional, the distance between grid items
+                itemWidth: 253 // Optional, the width of a grid item
+            };
+
+            var handler = $('#tiles li');
+            handler.wookmark(options);
+        }
+
+        $(document).ready(function(){
+            $('.curri_img').bxSlider({
+                auto: false,
+                speed: 500,
+                pause: 4000,
+                pager:false,
+                nextSelector:'.slider_next',
+                prevSelector:'.slider_prev',
+                controls: true,
+                nextText: '<img src="/asset/img/icon_curri_next_btn.png" alt="다음">',
+                prevText: '<img src="/asset/img/icon_curri_prev_btn.png" alt="이전">'
+            });
+
+            $(".tab_content").hide();
+            $(".tab_content:first").show();
+            $("ul.news_tab li").click(function () {
+                $("ul.news_tab li").removeClass("active");
+                $(this).addClass("active");
+                $(".tab_content").hide()
+                var activeTab = $(this).attr("rel");
+                $("#" + activeTab).fadeIn()
+            });
+
+            if( $(".curri_txt_area").innerHeight() < 430 ){
+               $(".curri_txt_area").css("display","table-cell");
+               $(".curri_txt").css("display","table");
+            } else {
+                $(".curri_txt").mCustomScrollbar();
+            }
+
+            if( $(".special .explain_text").innerHeight() > 87 ){
+                $(".special .explain_text").mCustomScrollbar();
+            } 
+
+            $(".click_youtube").on("click", function(){
+                $(".media_iframe .click_youtube").hide();
+                var videoURL = $(".iframe_view").prop('src');
+                videoURL += "&autoplay=1";
+                $(".iframe_view").prop('src',videoURL);
+            })
+
+            $("div[includeHTML]").each(function () { $(this).load($(this).attr("includeHTML"));});/*html inlude시에 넣은거라 개발시 삭제해주세요.*/
+        });
+        $(window).load(function () {
+           articleTiles();
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div includeHTML="/asset/include/header.html"></div>
+
+        <!-- contents wrap -->
+        <div class="contents_wrap">
+            <div class="contents_area professor_wrap">
+                <div class="visual_wrap">
+                    <div class="viaual_area">
+                        <div class="visual_txt">
+                            <h3 class="title">
+                                <span class="quotes">“</span>
+                                15년째 차병원에서<br>근무하게 한 힘은<br>오랜 전통과 역사입니다.
+                            </h3>
+                            <div class="doctor_txt">
+                                <p class="doctor_name"><span class="depart">산부인과</span> <span>심성신</span> 교수</p>
+                            </div>
+                            <div class="btn_area">
+                                <a href="" class="btn_ok">진료예약</a>
+                                <a href="">1:1 상담</a>
+                            </div>
+                        </div>
+                        <div class="visual_bottom">
+                            <table class="table_type01">
+                                <colgroup>
+                                    <col style="width:84px;">
+                                    <col style="width:*;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>일반진료</th>
+                                        <th>월</th>
+                                        <th>화</th>
+                                        <th>수</th>
+                                        <th>목</th>
+                                        <th>금</th>
+                                        <th>토</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>오전</td>
+                                        <td><img src="/asset/img/icon_schedule_mark.png" alt=""></td>
+                                        <td></td>
+                                        <td><img src="/asset/img/icon_schedule_mark.png" alt=""></td>
+                                        <td><img src="/asset/img/icon_schedule_mark.png" alt=""></td>
+                                        <td><img src="/asset/img/icon_schedule_mark.png" alt=""></td>
+                                        <td>1,3,4주</td>
+                                    </tr>
+                                    <tr>
+                                        <td>오후</td>
+                                        <td></td>
+                                        <td><img src="/asset/img/icon_schedule_mark.png" alt=""></td>
+                                        <td></td>
+                                        <td><img src="/asset/img/icon_schedule_mark.png" alt=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="visual_explain">
+                                <div class="special">
+                                    <p class="title">전문분야</p>
+                                    <div class="explain_text">
+                                        <div class="special_explain">
+                                                우울증, 조울증, 조현병, 불면증, 불안장애, 황장애, 강박증, 월경전 증후군, 산후우울증, 갱년기, 치매, 기억력 저하, 주의력 결핍 과잉 행동장애(ADHD), 불안장애, 황장애, 강박증, 월경전 증후군, 산후우울증, 갱년기, 치매, 기억력 저하, 주의력 결핍 과잉 행동장애(ADHD)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="early">
+                                    <p class="title">조기진료</p>
+                                    <div class="explain_text">AM 7:30 부터 진료</div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile_topImg">
+                        <img src="/asset/img/professor_visual_test.jpg" alt="">
+                    </div>
+                </div>
+                <div class="curri_wrap">
+                    <div class="curri_area">
+                        <div class="curri_txt">
+                            <div class="curri_txt_area">
+                                <p class="curri_title">학력 및 경력</p>
+                                <ul class="dot_list">
+                                    <li>이화여자대학교 의학과 졸업,</li>
+                                    <li>이화여자대학교 의과대학 대학원 석사</li>
+                                    <li>경희대학교 의과대학 대학원 박사</li>
+                                    <li>현 CHA 의과학대학교 분당차병원 난임센터 교수</li>
+                                </ul>
+                                <p class="curri_title">학회 및 학술활동</p>
+                                <ul class="dot_list">
+                                    <li>대한 산부인과학회 정회원</li>
+                                    <li>대한 생식의학회 정회원</li>
+                                    <li>대한 보조생식학회 정회원</li>
+                                    <li>대한 보조생식학회 학술위원회 위원 역임</li>
+                                    <li>대한 생식의학회 학술지 논문심사 위원 역임</li>
+                                    <li>대한 생식의학회 상임이사역임</li>
+                                    <li>현 CHA 의과학대학교 분당차병원 난임센터 교수</li>
+                                    <li>건강보험심사평가원 진료심사평가위원회(산부인과) 비상근 심사위원역임</li>
+                                </ul>
+                                <p class="curri_title">학회 및 학술활동</p>
+                                <ul class="dot_list">
+                                    <li>대한 산부인과학회 정회원</li>
+                                    <li>대한 생식의학회 정회원</li>
+                                    <li>대한 보조생식학회 정회원</li>
+                                    <li>대한 보조생식학회 학술위원회 위원 역임</li>
+                                    <li>대한 생식의학회 학술지 논문심사 위원 역임</li>
+                                    <li>대한 생식의학회 상임이사역임</li>
+                                    <li>현 CHA 의과학대학교 분당차병원 난임센터 교수</li>
+                                    <li>건강보험심사평가원 진료심사평가위원회(산부인과) 비상근 심사위원역임</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="curri_media">
+                            <div class="media_area">
+                                <h4 class="media_title">
+                                    <span>[YTN]</span> 심성신 교수 인터뷰
+                                </h4>
+                                <div class="media_iframe" style="display:block;">
+                                    <img class="click_youtube" src="/asset/img/icon_youtube_play_btn.png" alt="" />
+                                    <div class="iframe">
+                                        <div class="player">
+                                            <iframe class="iframe_view" src="https://www.youtube.com/embed/AcTs_fa48a4?&showinfo=0&autohide=1" frameborder="0" allow="picture-in-picture"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bxslider_wrap" style="display:none;">
+                                    <ul class="curri_img">
+                                        <li><img src="/asset/img/professor_curriculm_263_01.png" alt=""></li>
+                                        <li><img src="/asset/img/professor_curriculm_263_02.png" alt=""></li>
+                                    </ul>
+                                    <div class="curri_img_btn">
+                                        <span class="slider_prev"></span>
+                                        <span class="slider_next"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="curriculm_img">
+                        <img src="/asset/img/professor_curriculm_test.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="history_wrap">
+                    <div class="history_area">
+                        <ul class="news_tab tab02">
+                            <li class="active" rel="article">언론기사·영상</li>
+                            <li rel="paper">논문</li>
+                        </ul>
+
+                        <div id="article" class="tab_content">
+                            <div class="article">
+                                <ul id="tiles">
+                                    <li>
+                                        <a href="" target="_self">
+                                            <span class="txt_box">
+                                                <span class="title">난임정보</span>
+                                                <span class="txt">[명의열전] 난임치료, 진솔한 상담에서 시작됩니다.</span>
+                                                <span class="date">2019-01-26</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <img src="/asset/img/tiles_test01.png" alt="">
+                                            <span class="txt_box">
+                                                <span class="title">TV.동영상</span>
+                                                <span class="txt">[명의열전] 권황 교수 인터뷰</span>
+                                                <span class="date">2019-01-26</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <span class="txt_box">
+                                                <span class="title">논문</span>
+                                                <span class="txt">
+                                                    strogen-dependent
+                                                    expression of sine oculis
+                                                    homeobox 1 in the mouse
+                                                    uterus during the
+                                                    estrous cycle.
+                                                </span>
+                                                <span class="view">VIEW ></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <span class="txt_box">
+                                                <span class="title">난임정보</span>
+                                                <span class="txt">난임센터 권항 교수가 <br>알려주는 난임에 대한 <br>모든 것!</span>
+                                                <span class="date">2019-01-26</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <span class="txt_box">
+                                                <span class="title">논문</span>
+                                                <span class="txt">
+                                                    strogen-dependent
+                                                    expression of sine oculis
+                                                    homeobox 1 in the mouse
+                                                    uterus during the
+                                                    estrous cycle.
+                                                </span>
+                                                <span class="view">VIEW ></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <img src="/asset/img/tiles_test02.png" alt="">
+                                            <span class="txt_box">
+                                                <span class="title">TV.동영상</span>
+                                                <span class="txt">[명의열전] 권황 교수 인터뷰</span>
+                                                <span class="date">2019-01-26</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <span class="txt_box">
+                                                <span class="title">난임정보</span>
+                                                <span class="txt">난임센터 권항 교수가 <br>알려주는 난임에 대한 <br>모든 것!</span>
+                                                <span class="date">2019-01-26</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <span class="txt_box">
+                                                <span class="title">언론보도</span>
+                                                <span class="txt">EBS1 메디컬다큐 <br>‘난임센터 권황 교수’ <br>– 부모가 되고 싶어요</span>
+                                                <span class="date">2019-01-26</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_self">
+                                            <span class="txt_box">
+                                                <span class="title">언론보도</span>
+                                                <span class="txt">차병원의 난임 연구&기술력, 호주 CFC와 만나다</span>
+                                                <span class="date">2019-01-26</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn_area">
+                                <a href="#">더보기</a>
+                            </div>
+                        </div>
+
+                        <div id="paper" class="tab_content">
+                            <div class="paper">
+                                <ol class="color_number_list">
+                                    <li>Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle.</li>
+                                    <li>Comparison of the effect of different media on the clinical outcomes of the density-gradient centrifugation/swim-up and swim-up methods.Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle.</li>
+                                    <li>Comparison of the effect of different media on the clinical outcomes of the density-gradient centrifugation/swim-up and swim-up methods.Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle. Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle.</li>
+                                    <li>Comparison of the effect of different media on the clinical outcomes of the density-gradient centrifugation/swim-up and swim-up methods.Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle. Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle. Comparison of the effect of different media on the clinical outcomes of the density-gradient centrifugation/swim-up and swim-up methods.</li>
+                                    <li>Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle.</li>
+                                    <li>Comparison of the effect of different media on the clinical outcomes of the density-gradient centrifugation/swim-up and swim-up methods.Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle.</li>
+                                    <li>Comparison of the effect of different media on the clinical outcomes of the density-gradient centrifugation/swim-up and swim-up methods.Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle. Estrogen-dependent expression of sine oculis homeobox 1 in the mouse uterus during the estrous cycle.</li>
+                                </ol>
+                            </div>
+                            <div class="btn_area">
+                                <a href="#">더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //contents wrap -->
+
+        <div includeHTML="/asset/include/footer.html"></div>
+    </div>
+</body>
+</html>

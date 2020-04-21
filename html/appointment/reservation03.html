@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일산차병원</title>
+
+    <meta name="description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다.">
+    <meta property="og:description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다." />
+    <link rel="shortcut icon" type="image/x-icon" href="../../asset/img/cha.ico">
+    <!-- <meta property="og:image" content="../../asset/img/og_image.jpg"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="일산차병원" />
+    <meta property="og:site_name" content="일산차병원" />
+    <!-- <meta property="og:url" content="http://ilsan.chamc.co.kr" />
+    <link rel="canonical" href="http://ilsan.chamc.co.kr"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../asset/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/NotoSansKR-Hestia.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/mCustomScrollbar.css" />
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+    <script language="JavaScript" type='text/javascript' src="../../asset/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/script.js"></script>
+    <script type="text/javascript" src="../../asset/js/program.js"></script>
+    <script type="text/javascript" src="../../asset/js/index.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="../../asset/js/slick.js"></script>
+    <script type="text/javascript" src="../../asset/js/scroll.js"></script>
+    <script type="text/javascript" src="../../asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/getComputedStyle.js"></script>
+    <script type="text/javascript" src="../../asset/js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/main.js"></script>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../asset/css/ie8.css" />
+        <script language="JavaScript" type='text/javascript' src="../../asset/js/poly-checked.min.js"></script>
+        <script type="text/javascript" src="../../asset/js/excanvas.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../../asset/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--popup_div-->
+    <div class="popup_div">
+        <div class="popup_area">
+            <div id="divStep03"  class="reserve_wrap">
+                <div class="popup_title_area">
+                    예약하기
+                    <a href="#none" class="popup_close"></a>
+                </div>
+
+                <div class="popup_con">
+                    <div class="step_wrap">
+                        <div class="step_btn_area list03">
+                            <div><p><strong>STEP1</strong> 진료과·의료진 선택</p></div>
+                            <div class="on"><p><strong>STEP2</strong> 일정선택</p></div>
+                            <div><p><strong>STEP3</strong> 환자 정보입력 및 예약확인</p></div>
+                        </div>
+
+                        <div class="step_con_area">
+                           <div class="step_con on">
+                                <div class="popup_line_box">
+                                    <div class="popup_line_box_title">
+                                        <span class="txtPartName">소화기내과</span> <span class="txtDoctorName">이화영</span> 교수님 진료 일정입니다.
+                                    </div>
+                                    <div class="popup_line_box_con">
+                                        <div class="line_box_con_title">진료일 선택</div>
+                                        <div class="box_con_gray_box">
+                                            가장 빠른 예약가능일
+                                            <span id="spanFastDateTime">2019-12-18  11:40</span>
+                                            입니다.
+                                            <a href="#none" class="btn_choice" id="aFastDateTime">선택</a>
+                                        </div>
+                                        <div class="calendar_wrap">
+                                            <div class="calendar_area" id="divCalendar">
+                                                <div id="datepicker"></div>
+                                                <div class="calendar_explain">
+                                                    <span class="today">현재날짜</span>
+                                                    <span class="unavailable">진료예약 불가</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popup_line_box_con">
+                                        <div class="line_box_con_title"><span class="mo fl">2. </span>진료시간 선택</div>
+                                        <div class="box_con_gray_box">
+                                            <ul class="time_choice_list" id="divTimeList">
+                                                <li class="on"><a href="#none">08:40</a></li>
+                                                <li><a href="#none">09:10</a></li>
+                                                <li><span>11:20</span></li>
+                                                <li><span>13:40</span></li>
+                                                <li><span>14:50</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn_area">
+                    <a href="#none" >이전</a>
+                    <a href="#none" class="btn_ok">선택완료</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//popup_div-->
+</body>
+</html>

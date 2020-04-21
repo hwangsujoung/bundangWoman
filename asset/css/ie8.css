@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight:lighter;
+  src: url(fonts/NanumGothicLight.eot);
+  src: url(fonts/NanumGothicLight.eot?#iefix) format('embedded-opentype'),
+       url(fonts/NanumGothicLight.woff2) format('woff2'),
+       url(fonts/NanumGothicLight.woff) format('woff'),
+       url(fonts/NanumGothicLight.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight:normal;
+  src: url(fonts/NanumGothic.eot);
+  src: url(fonts/NanumGothic.eot?#iefix) format('embedded-opentype'),
+       url(fonts/NanumGothic.woff2) format('woff2'),
+       url(fonts/NanumGothic.woff) format('woff'),
+       url(fonts/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight:bold;
+  src: url(fonts/NanumGothicBold.eot);
+  src: url(fonts/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(fonts/NanumGothicBold.woff2) format('woff2'),
+       url(fonts/NanumGothicBold.woff) format('woff'),
+       url(fonts/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight:bolder;
+  src: url(fonts/NanumGothicExtraBold.eot);
+  src: url(fonts/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(fonts/NanumGothicExtraBold.woff2) format('woff2'),
+       url(fonts/NanumGothicExtraBold.woff) format('woff'),
+       url(fonts/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+*, *:before, *:after { margin:0; padding:0; border:0; }
+body { letter-spacing:-1.1px; }
+/*input[type*="radio"] { margin-top:-3px; }
+.input_radio input[type*="radio"] { display:inline; }
+.input_radio label { padding-left:0px; }
+.input_radio label:after { display:none; }*/
+
+
+
+.main_visual_wrap video { width:100%; position:absolute; top:0; min-height:590px; }
+.main_section03 .section03_wrap .slick-list .s3_hover .date_ul ul li  { margin-left:0; }
+.main_section04 .s4_tilles ul li a .tile_box .over { filter:alpha(opacity=0); }
+.main_section04 .s4_tilles ul li a .tile_box .over .sns_ico { filter:alpha(opacity=0); }
+.main_section04 .s4_tilles ul li a .tile_box .over .bg { filter:alpha(opacity=0); }
+.main_section04 .s4_tilles ul li a .tile_box .over .bg { filter:alpha(opacity=0); }
+
+
+
+/* 회원가입 레이어팝업 */
+.popup_tab_area .popup_tab_list.list05 li:first-child a { width:190px; }
+
+/* 상담실 */
+.pop_online_pwd .pop_online_wrap .online_input_box input { width:245px; }
+
+
+/* 예약하기 */
+/* .popup_line_box .popup_line_box_con .doctor_list_area .doctor_list .btn_profile { width:86px; } */
+
+
+.search_area select { background:transparent; }
+.select_area select { background:transparent; }
+
+
+
+
+/* lnb menu */
+/*.lnb_wrap .lnb_area .lnb_list li {margin-bottom:-4px;}*/
+/* 예약조회·취소 */
+/*.reservation_wrap .reservation_search_area .reservation_info_wrap .reservation_info_area .reservation_info .reservation_desc {letter-spacing:-1.7px;}*/
+/* 썸네일 게시판 */
+/*.sum_board_area .sum_board_list li:hover img {width:110%;}*/
+

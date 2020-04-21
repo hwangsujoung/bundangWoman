@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일산차병원</title>
+
+    <meta name="description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다.">
+    <meta property="og:description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다." />
+    <link rel="shortcut icon" type="image/x-icon" href="../../asset/img/cha.ico">
+    <!-- <meta property="og:image" content="../../asset/img/og_image.jpg"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="일산차병원" />
+    <meta property="og:site_name" content="일산차병원" />
+    <!-- <meta property="og:url" content="http://ilsan.chamc.co.kr" />
+    <link rel="canonical" href="http://ilsan.chamc.co.kr"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../asset/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/NotoSansKR-Hestia.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/mCustomScrollbar.css" />
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+    <script language="JavaScript" type='text/javascript' src="../../asset/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/script.js"></script>
+    <script type="text/javascript" src="../../asset/js/program.js"></script>
+    <script type="text/javascript" src="../../asset/js/index.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="../../asset/js/slick.js"></script>
+    <script type="text/javascript" src="../../asset/js/scroll.js"></script>
+    <script type="text/javascript" src="../../asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/getComputedStyle.js"></script>
+    <script type="text/javascript" src="../../asset/js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/main.js"></script>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../asset/css/ie8.css" />
+        <script language="JavaScript" type='text/javascript' src="../../asset/js/poly-checked.min.js"></script>
+        <script type="text/javascript" src="../../asset/js/excanvas.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../../asset/js/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        $(function(){
+            $("div[includeHTML]").each(function () { $(this).load($(this).attr("includeHTML"));});/*html inlude시에 넣은거라 개발시 삭제해주세요.*/
+
+            $(".like_btn").on("click", function(){
+                var count = $(this).parents(".table_view_con").find(".like_count span");
+                var like = count.text();
+                like = parseInt(like);
+                if( !$(this).hasClass("on") ) {
+                    $(this).addClass("on");
+                    like = (like + 1);
+                    count.text(like);
+                } else {
+                    $(this).removeClass("on");
+                    like = (like - 1);
+                    count.text(like);
+                }
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div includeHTML="/asset/include/header.html"></div>
+
+        <!-- contents wrap -->
+        <div class="contents_wrap health">
+            <!-- path_wrap -->
+            <div class="path_wrap">
+                <div class="path_area">
+                    <div class="path_left">
+                        <a href="/" class="home"></a>
+                        <div class="path">
+                            <a href="javascript:;"><span>건강정보</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료예약·상담</a></li>
+                                <li><a href="javascript:void(0)">진료과·의료진</a></li>
+                                <li><a href="javascript:void(0)">이용안내</a></li>
+                                <li class="current"><a href="javascript:void(0)">건강정보</a></li class="current">
+                                <li><a href="javascript:void(0)">120 웰니스</a></li>
+                            </ul>
+                        </div>
+                        <div class="path">
+                            <a href="javascript:;"><span>진료과·의료진 찾기</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료과·의료진 찾기</a></li>
+                                <li><a href="javascript:void(0)">쉬운 진료과 찾기</a></li>
+                                <li><a href="javascript:void(0)">진료과별 FAQ</a></li>
+                                <li><a href="javascript:void(0)">진료안내상담</a></li>
+                            </ul>
+                        </div>
+                        <div class="path">
+                            <a href="javascript:;"><span>진료과 리스트</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료과 리스트</a></li>
+                                <li><a href="javascript:void(0)">센터 리스트</a></li>
+                                <li><a href="javascript:void(0)">클리닉 리스트</a></li>
+                            </ul>
+                        </div>
+                        <div class="path last">
+                            <a href="javascript:;"><span>산부인과</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">산부인과</a></li>
+                                <li><a href="javascript:void(0)">내과</a></li>
+                                <li><a href="javascript:void(0)">외과</a></li>
+                                <li><a href="javascript:void(0)">소아청소년과</a></li>
+                                <li><a href="javascript:void(0)">비뇨의학과</a></li>
+                                <li><a href="javascript:void(0)">정신건강의학과</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="path_right">
+                        <a href="javascript:;"class="path_clinic"></a>
+                        <div class="path_share">
+                            <a href="javascript:;"><span></span></a>
+                            <div>
+                                <p>공유하기</p>
+                                <a href="javascript:void(0)" class="first"><img src="/asset/img/icon_f.png" alt="페이스북"></a>
+                                <a href="javascript:void(0)"><img src="/asset/img/icon_b.png" alt="블로그"></a>
+                                <a href="javascript:void(0)"><img src="/asset/img/icon_k.png" alt=카카오톡></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //path_wrap -->
+
+            <!-- contents_menu_wrap -->
+            <div class="contents_menu_wrap">
+                <div class="sub_visual_wrap">
+                    <div class="svisual_wp">
+                        <ul>
+                            <li class="on on1"><img src="/asset/img/pattern_01.png" alt=""></li>
+                            <li class="on on2"><img src="/asset/img/pattern_02.png" alt=""></li>
+                            <li class="on on3"><img src="/asset/img/pattern_03.png" alt=""></li>
+                            <li class="on on4"><img src="/asset/img/pattern_04.png" alt=""></li>
+                            <li class="on on5"><img src="/asset/img/pattern_05.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="contents_menu_area">
+                        <a href="#" target="_self" class="prev_menu">건강라이프 칼럼<span></span></a>
+                        <h1 class="current_menu">여성의학정보</h1>
+                        <a href="#" target="_self" class="next_menu">건강한출산 A to Z<span></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- //contents_menu_wrap -->
+
+            <!-- contents -->
+            <div class="contents_area w1060">
+                <h2>여성의학정보</h2>
+                <div class="health_wrap">
+                    <div class="orange_bg_box">
+                        <div class="or_in_box">
+                            임신하면 무엇을 해야하는지 알기가 어렵고,<br>
+                            출산은 막연히 두려우신가요?<br>
+                            이제 차병원 산부인과 교수진이 전하는 이야기를 들어보세요.
+                        </div>
+                    </div>
+                    <div class="online_wrap ow_v2 table_div">
+                        <div class="counsel_box_area">
+                            <div class="counsel_box">
+                                <div class="pic_area">
+                                    <img src="/asset/img/online_doctor_test.png" alt="신중식">
+                                </div>
+                                <div class="doctor_con_area">
+                                    <div class="doctor_name">산부인과 신중식 교수님</div>
+                                    <ul class="doctor_status">
+                                        <li class="major">
+                                            <strong>전문분야</strong>
+                                            <span>난임 및 시험관 아기 시술, 반복유산, 반복적 착상실패, 난소기능저하, 자궁기형, 착상전 유전자 검사, 복강경·자궁경 수술</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn_area">
+                                        <a href="" class="btn_ok">진료예약</a>
+                                        <a href="" class="btn_default">상세소개</a>
+                                        <a href="" class="btn_default">1:1 상담</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table_wrap">
+                            <div class="table_area">
+                                <div class="table_view">
+                                    <div class="table_view_con">
+                                        <div class="title">잠 못 드는 임신부, 시기별 수면장애 대처법
+                                            <button class="like_btn"></button>
+                                        </div>
+                                        <div class="view_con_info">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>52</span></p>
+                                            <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                            <p class="date"><span>2019.08.26</span></p>
+                                        </div>
+                                        <div class="view_con">
+                                            <div class="board_cms">
+                                                <div class="title_wrap">
+                                                    <h3 class="tit">여성과 아이의 건강을 위한 약속,<br>일산차병원!</h3>
+                                                    <div class="gray_area">
+                                                        <ul class="dot_list01">
+                                                            <li>자궁내막암 환자 5년 간 약 60% 가량 증가…빨라진 초경과 서구화된 식습관 원인</li>
+                                                            <li>20, 30대 젊은층 환자, 2015년 944명에서 2019년 1,932명으로 2배 이상 급증</li>
+                                                            <li>조기발견 시 완치율 85%로 높아, 비정상 질 출혈 등의 초기증상 놓치지 말아야</li>
+                                                            <li>가임기 여성, 호르몬치료로 자궁 보존해 임신과 출산 가능</li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="txt">2020년 1월, 일산차병원이 그 모습을 드러냈다. 60년 역사의 차병원 여성의학 기술력과 글로벌 네트워크 운영 역량이 총집결된 일산차병원은 80여 명의 의료진이 근무하며, 13개 진료과와 8개 센터를 운영한다. 국내 최대 규모의 여성 종합병원 일산차병원을 만나보자.</p>
+                                                </div>
+                                                <div class="cnt">
+                                                    <h5 class="cnt_tit"><span class="point">‘여성의 생애주기’에 집중하다</span></h5>
+                                                    <div class="cnt_img">
+                                                        <img src="http://wmanager.chamc.co.kr/file/magazine/2020_02_b_01.jpg" alt="">
+                                                        <div class="description">
+                                                            <p>
+                                                                복강경 수술을 집도하고 있는 최성훈 교수. <br>수술 난이도가 높은 미만성 담도암에 최소 침습 수술을 시도했다. 
+                                                            </p>
+                                                        </div>
+                                                    </div>                         
+                                                    <p class="cnt_txt">
+                                                        5년 생존율이 20%에도 못 미치는 담도암은 초기에 증상이 없을 뿐 아니라 있더라도 가끔 복통이 오거나 간 기능 검사에서 이상이 나타나는 정도라 조기 발견이 매우 어려운 편이다. 간에서 만들어진 담즙이 십이지장까지 가는 경로인 담도는 미세한 나뭇가지 같은 형태의 해부학적 특성상 치료가 어려운 암으로 알려져 있다. 주요 장기로 침범할 가능성이 높아 담도암을 치료할 때 병기보다는 종양 위치, 간 내 침범 여부가 중요한 요소로 작용한다. 담도암의 완치를 위해서는 수술적 절제가 유일한데, 주변 혈관과 맞닿아 있어 수술조차 난이도가 높다. 특히 크기가 작은 암이 흩어져 위아래로 길게 뻗어나가는 미만성 담도암은 대부분 간과 췌두십이지장을 동시 절제 후 수술 부위를 소장과 연결하는 등 복잡한 과정과 정교한 수술 기법을 필요로 한다.
+                                                    </p>
+                                                    <div class="cnt_img">
+                                                        <img src="http://wmanager.chamc.co.kr/file/magazine/2020_02_b_02.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="cnt">
+                                                    <h5 class="cnt_tit">0~14weeks, 초기 :<br><span class="point">‘여성의 생애주기’에 집중하다</span></h5>
+                                                    <div class="cnt_img">
+                                                        <img src="http://wmanager.chamc.co.kr/file/magazine/2020_02_b_01.jpg" alt="">
+                                                    </div>                         
+                                                    <p class="cnt_txt">
+                                                        산후우울증의 예방과 치료를 위해선 가족이 산모는 육체적으로나 정신적으로 취약하다는 점을 이해하여 육아를 분담해 주고, 산모 입장에서 공감하고 격려해 주는 것이 꼭 필요하다. 
+                                                    </p>
+                                                    <h6 class="cnt_tit02">입덧</h6>
+                                                    <p class="cnt_txt">
+                                                        입덧은 임신한 여성 중 50% 이상이 경험할 정도로 임신 중 나타나는 증상이며, 이 중 약 0.5~2% 정도는 병원에서 의사의 치료를 받아야 할 만큼 심한 임신과다구토를 경험한다. 보통 임신 5주~6주 사이에 시작되어 임신 9주~13주 정도에 가장 심해진다. 임신 중기인 16주~18주가 되면 거의 호전된다. 증상이 심할 경우 디클렉틱(doxylamine, pyridoxine) 약물치료가 도움이 될 수 있다. 
+                                                    </p>
+                                                    <h6 class="cnt_tit02">입덧</h6>
+                                                    <p class="cnt_txt">
+                                                        입덧은 임신한 여성 중 50% 이상이 경험할 정도로 임신 중 나타나는 증상이며, 이 중 약 0.5~2% 정도는 병원에서 의사의 치료를 받아야 할 만큼 심한 임신과다구토를 경험한다. 보통 임신 5주~6주 사이에 시작되어 임신 9주~13주 정도에 가장 심해진다. 임신 중기인 16주~18주가 되면 거의 호전된다. 증상이 심할 경우 디클렉틱(doxylamine, pyridoxine) 약물치료가 도움이 될 수 있다. 
+                                                    </p>
+                                                    <div class="iframe_wrap">
+                                                        <div class="iframe_area">
+                                                            <iframe src="https://www.youtube.com/embed/pJUenpqKpeI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                            <img src="/asset/img/iframe_ratio.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cnt">
+                                                    <h5 class="cnt_tit"><span class="point">증상유뮤, 임신여부 등 고려<br>환자 맞춤형 치료방법 선택해야</span></h5>                   
+                                                    <p class="cnt_txt">
+                                                        자궁근종의 경우 근종의 위치나 개수, 크기에 따라 나타나는 증상이 다양하므로 치료는 환자의 증상유무와 심각성, 나이, 근종크기 및 위치, 임신여부 등을 최대한 고려해 해당환자에게 가장 적합한 치료방법을 선택하는 것이 중요하다. 자궁근종의 치료 방밥은 크게 수술적 치료와 비수술적 치료로 나눌 수 있다. 자궁근종의 수술적 치료방법은 근종만 없애는 ‘근종 절제술’이나 자궁전체를 들어내는 ‘전(全) 자궁적출술이 있다. 과거에는 완치를 목표로 하고 재발을 방지하기 위해 자궁적출수술을 실시하는 경우가 많았지만 가임기 여성에게는 적합하지 않고, 출산이 끝난 중년여성에게도 자궁은 생각 외로 큰 의미를 지니고 있어, 자궁근종 절제술이 근종치료의 가장 일반적인 치료법이다. 기존 개복 수술 방식으로는 절개부위가 커서 가급적 개복을 피하면서 입원기간이 짧고 위험성이 적은 복강경 수술이나 로봇복강경 수술을 하는 경우가 많다. 특히 임신을 계획하고 있는 경우, 로봇복강경 수술이 보다 정밀한 수술을 시행할 수 있는 등 장점이 많다.
+                                                    </p>
+                                                </div>
+
+                                                <div class="color_box v2">
+                                                    <h5 class="cnt_tit"><span class="point">일산차병원에서 만나요! 태교학교</span></h5>
+                                                    <p class="cnt_txt">일산차병원에서 선보인 ‘태교학교’는 국내 최초의 태교 프로그램으로, 임신부가 태교에 쉽게 접근할 수 있도록 체계적인 프로그램을 제공하는 것이 목적이다. 이를 위해 차병원 산부인과와 정신건강의학과 의료진이 협력해 프로그램과 강좌를 준비했다. 마음 태교, 운동 태교, 음식 태교, 미술 태교, 소리 태교 등의 전문 프로그램 외에도 남편 만삭 체험, 분만 교육, 신생아 케어 등 출산과 육아에 도움이 되는 프로그램으로 구성되어 있다.</p>
+                                                    <div class="btn_area">
+                                                        <a href="javascrpit:void(0)" class="btn_ok">태교학교 영상 보러 가기></a>
+                                                    </div>
+                                                </div>
+                                    
+                        
+                                                <div class="doctor_area">
+                                                    <table>
+                                                        <tr>
+                                                            <th>
+                                                                <p class="point">일산차병원 난임센터</p>
+                                                                <p class="name">최지영 교수</p>
+                                                            </th>
+                                                            <td>
+                                                                <p class="info">다낭성난소증후군(배란장애), 습관성유산, 착상전유전진단, 가임력보존, 자궁경수술, 외국인진료</p>
+                                                                <p class="info2">
+                                                                    <span>02-3015-5370/5460</span>
+                                                                    <span>Ilsan.chamc.co.kr</span>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                                <div class="color_box">
+                                                    <div class="point">일산차병원</div>
+                                                    <div class="rt_box">
+                                                        <table>
+                                                            <tr>
+                                                                <th>주소</th>
+                                                                <td>경기도 고양시 일산동구 중앙로 1205</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>문의</th>
+                                                                <td>031-782-8300</td>
+                                                            </tr>
+                                                        </table>
+                                                        <a href="javascript:void(0);" class="btn_home">홈페이지 바로가기</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="prev_next_view">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 100px;">
+                                            <col style="width: *;">
+                                            <col style="width: 135px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>이전글</strong></td>
+                                                <td>
+                                                    <a href=" ">[소아청소년과 윤소영 교수] 선천성 심장병 진단</a>
+                                                </td>
+                                                <td>2019.05.17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#none">
+                                                        <strong>다음글</strong>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="">[소아청소년과 윤소영 교수] 선천성 심장병 진단</a>
+                                                </td>
+                                                <td>2019.05.17</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+    
+                                <div class="btn_area">
+                                    <a href="" class="gray">목록</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- //contents -->
+        </div>
+        <!-- //contents wrap -->
+
+        <div includeHTML="/asset/include/footer.html"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>일산차병원</title>
+
+    <meta name="description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다.">
+    <meta property="og:description" content="여성 특화 병원의 시작, 차병원이 이제 일산에서 여성 생애주기별 맞춤 의료서비스를 시작합니다." />
+    <link rel="shortcut icon" type="image/x-icon" href="../../asset/img/cha.ico">
+    <!-- <meta property="og:image" content="../../asset/img/og_image.jpg"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="일산차병원" />
+    <meta property="og:site_name" content="일산차병원" />
+    <!-- <meta property="og:url" content="http://ilsan.chamc.co.kr" />
+    <link rel="canonical" href="http://ilsan.chamc.co.kr"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../asset/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/NotoSansKR-Hestia.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../asset/css/mCustomScrollbar.css" />
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+    <script language="JavaScript" type='text/javascript' src="../../asset/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/script.js"></script>
+    <script type="text/javascript" src="../../asset/js/program.js"></script>
+    <script type="text/javascript" src="../../asset/js/index.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="../../asset/js/slick.js"></script>
+    <script type="text/javascript" src="../../asset/js/scroll.js"></script>
+    <script type="text/javascript" src="../../asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/getComputedStyle.js"></script>
+    <script type="text/javascript" src="../../asset/js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../asset/js/main.js"></script>
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="../../asset/css/ie8.css" />
+        <script language="JavaScript" type='text/javascript' src="../../asset/js/poly-checked.min.js"></script>
+        <script type="text/javascript" src="../../asset/js/excanvas.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../../asset/js/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        $(function(){
+            $("div[includeHTML]").each(function () { $(this).load($(this).attr("includeHTML"));});/*html inlude시에 넣은거라 개발시 삭제해주세요.*/
+
+            $(".fm_tab").click(function () {
+                var vIndex = $(this).index() + 1;
+                $(".fm_tab").removeClass("on");
+                $(this).addClass("on");
+
+                for (var i = 1 ; i < 3; i++) {
+                    if (vIndex == i) {
+                        $(".fm_tab0" + i).show();
+                    } else {
+                        $(".fm_tab0" + i).hide();
+                    }
+                }
+            });
+
+            $(".fmCnt_li:first-child, .fmCnt_li:nth-child(4n+1)").addClass("first");
+            $(".like_btn").on("click", function(){
+                var count = $(this).parents(".fmCnt_li").find(".like_count span");
+                var like = count.text();
+                like = parseInt(like);
+                if( !$(this).hasClass("on") ) {
+                    $(this).addClass("on");
+                    like = (like + 1);
+                    count.text(like);
+                } else {
+                    $(this).removeClass("on");
+                    like = (like - 1);
+                    count.text(like);
+                }
+            });
+            var fmSlider = $(".fm_wrap").slick({
+                variableWidth: true,
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3,
+                prevArrow: $('.fm_prev'),
+                nextArrow: $('.fm_next'),
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div includeHTML="/asset/include/header.html"></div>
+
+        <!-- contents wrap -->
+        <div class="contents_wrap health">
+            <!-- path_wrap -->
+            <div class="path_wrap">
+                <div class="path_area">
+                    <div class="path_left">
+                        <a href="/" class="home"></a>
+                        <div class="path">
+                            <a href="javascript:;"><span>건강정보</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료예약·상담</a></li>
+                                <li><a href="javascript:void(0)">진료과·의료진</a></li>
+                                <li><a href="javascript:void(0)">이용안내</a></li>
+                                <li class="current"><a href="javascript:void(0)">건강정보</a></li class="current">
+                                <li><a href="javascript:void(0)">120 웰니스</a></li>
+                            </ul>
+                        </div>
+                        <div class="path">
+                            <a href="javascript:;"><span>진료과·의료진 찾기</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료과·의료진 찾기</a></li>
+                                <li><a href="javascript:void(0)">쉬운 진료과 찾기</a></li>
+                                <li><a href="javascript:void(0)">진료과별 FAQ</a></li>
+                                <li><a href="javascript:void(0)">진료안내상담</a></li>
+                            </ul>
+                        </div>
+                        <div class="path">
+                            <a href="javascript:;"><span>진료과 리스트</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">진료과 리스트</a></li>
+                                <li><a href="javascript:void(0)">센터 리스트</a></li>
+                                <li><a href="javascript:void(0)">클리닉 리스트</a></li>
+                            </ul>
+                        </div>
+                        <div class="path last">
+                            <a href="javascript:;"><span>산부인과</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0)">산부인과</a></li>
+                                <li><a href="javascript:void(0)">내과</a></li>
+                                <li><a href="javascript:void(0)">외과</a></li>
+                                <li><a href="javascript:void(0)">소아청소년과</a></li>
+                                <li><a href="javascript:void(0)">비뇨의학과</a></li>
+                                <li><a href="javascript:void(0)">정신건강의학과</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="path_right">
+                        <a href="javascript:;"class="path_clinic"></a>
+                        <div class="path_share">
+                            <a href="javascript:;"><span></span></a>
+                            <div>
+                                <p>공유하기</p>
+                                <a href="javascript:void(0)" class="first"><img src="/asset/img/icon_f.png" alt="페이스북"></a>
+                                <a href="javascript:void(0)"><img src="/asset/img/icon_b.png" alt="블로그"></a>
+                                <a href="javascript:void(0)"><img src="/asset/img/icon_k.png" alt=카카오톡></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //path_wrap -->
+
+            <!-- contents_menu_wrap -->
+            <div class="contents_menu_wrap">
+                <div class="sub_visual_wrap">
+                    <div class="svisual_wp">
+                        <ul>
+                            <li class="on on1"><img src="/asset/img/pattern_01.png" alt=""></li>
+                            <li class="on on2"><img src="/asset/img/pattern_02.png" alt=""></li>
+                            <li class="on on3"><img src="/asset/img/pattern_03.png" alt=""></li>
+                            <li class="on on4"><img src="/asset/img/pattern_04.png" alt=""></li>
+                            <li class="on on5"><img src="/asset/img/pattern_05.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="contents_menu_area">
+                        <a href="#" target="_self" class="prev_menu">건강라이프 칼럼<span></span></a>
+                        <h1 class="current_menu">여성의학정보</h1>
+                        <a href="#" target="_self" class="next_menu">건강한출산 A to Z<span></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- //contents_menu_wrap -->
+
+            <!-- contents -->
+            <div class="contents_area w100">
+                <!-- <h2>여성의학정보</h2> -->
+                <div class="fm_slider">
+                    <div class="fm_wrap">
+                        <div>
+                            <div class="tablecell">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <div class="bg"></div>
+                                    <img src="/asset/img/health_female_testImg01.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tablecell">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <div class="bg"></div>
+                                    <img src="/asset/img/health_female_testImg02.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tablecell">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <div class="bg"></div>
+                                    <img src="/asset/img/health_female_testImg03.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tablecell">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <div class="bg"></div>
+                                    <img src="/asset/img/health_female_testImg04.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="fm_arrow">
+                        <li class="fm_prev"><img src="/asset/img/icon_big_prev_btn.png" alt=" 이전"></li>
+                        <li class="fm_next"><img src="/asset/img/icon_big_next_btn.png" alt=" 다음"></li>
+                    </ul>
+                </div>
+                <div class="health_wrap">
+                    <!-- <div class="orange_bg_box w1060">
+                        <div class="or_in_box">
+                            임신하면 무엇을 해야하는지 알기가 어렵고,<br>
+                            출산은 막연히 두려우신가요?<br>
+                            이제 차병원 산부인과 교수진이 전하는 이야기를 들어보세요.
+                        </div>
+                    </div> -->
+
+                    <div class="gray_full_box">
+                        <ul>
+                            <li class="first on"><a href="javascript:;">전체</a></li>
+                            <li><a href="javascript:;">임신과 변화</a></li>
+                            <li><a href="javascript:;">임신과 식생활</a></li>
+                            <li><a href="javascript:;">임신과 운동</a></li>
+                            <li class="first"><a href="javascript:;">임신과 약물</a></li>
+                            <li><a href="javascript:;">임신과 감염</a></li>
+                            <li><a href="javascript:;">다태임신</a></li>
+                            <li><a href="javascript:;">임신 합병증</a></li>
+                            <li class="first"><a href="javascript:;">산전관리</a></li>
+                            <li><a href="javascript:;">유전질환</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="health_female">
+                        <div class="tab_fm_wrap">
+                            <div class="tab_fm">
+                                <ul class="tab_fm_ul">
+                                    <li class="fm_tab on"><a href="javascript:;">최신순</a></li>
+                                    <li class="fm_tab"><a href="javascript:;">추천순</a></li>
+                                </ul>                   
+                            </div>
+                        </div>
+                        <div class="fm_cnt_wrap">
+                            <div class="fm_tab01 fm_cnt">
+                                <div class="fmCnt_ul">
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>0</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>1</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>2</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>3</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>4</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>5</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>6</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>7</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>8</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>9</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>10</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>11</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="paging_wrap">
+                                    <div class="paging_area">
+                                        <div id="" class="paging">
+                                            <a class="first"><span class="blind">처음</span></a>
+                                            <a class="prev"><span class="blind">이전</span></a>
+                                            <a class="on">1</a>
+                                            <a href="javascript:;"><span>2</span></a>
+                                            <a href="javascript:;"><span>3</span></a>
+                                            <a href="javascript:;"><span>4</span></a>
+                                            <a href="javascript:;"><span>5</span></a>
+                                            <a href="javascript:;" class="next"><span class="blind">다음</span></a>
+                                            <a href="javascript:;" class="last"><span class="blind">끝</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fm_tab02 fm_cnt">
+                                <div class="fmCnt_ul">
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>0</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>1</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>2</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>3</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>0</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>1</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>2</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fmCnt_li">
+                                        <div class="li_view">
+                                            <img src="/asset/img/mychart_test.jpg" class="recom_img" alt="">
+                                            <p class="category">임신과 식생활</p>
+                                            <p class="title">잠 못 드는 임신부,<br>시기별 수면장애 대처법</p>
+                                            <p class="sub_txt">산부인과 교수진</p>
+                                            <div class="count_wrap">
+                                                <p class="like_count"><img src="/asset/img/icon_health_like.png" alt="좋아요"><span>3</span></p>
+                                                <p class="view_count"><img src="/asset/img/icon_health_view.png" alt="조회수"><span>901</span></p>
+                                                <p class="date"><span>2019.08.26</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="link_wrap">
+                                            <a href="javascript:;" target="_self">
+                                                <img src="/asset/img/medical_search_icon01.png">
+                                                <span>자세히보기</span>
+                                            </a>
+                                            <button class="like_btn" href="javascript:;" target="_self">
+                                                <span class="img"></span>
+                                                <span>좋아요</span>
+                                            </button>
+                                            <div class="bg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="paging_wrap">
+                                    <div class="paging_area">
+                                        <div id="" class="paging">
+                                            <a class="first"><span class="blind">처음</span></a>
+                                            <a class="prev"><span class="blind">이전</span></a>
+                                            <a class="on">1</a>
+                                            <a href="javascript:;"><span>2</span></a>
+                                            <a href="javascript:;"><span>3</span></a>
+                                            <a href="javascript:;"><span>4</span></a>
+                                            <a href="javascript:;"><span>5</span></a>
+                                            <a href="javascript:;" class="next"><span class="blind">다음</span></a>
+                                            <a href="javascript:;" class="last"><span class="blind">끝</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //contents -->
+        </div>
+        <!-- //contents wrap -->
+
+        <div includeHTML="/asset/include/footer.html"></div>
+    </div>
+</body>
+</html>
