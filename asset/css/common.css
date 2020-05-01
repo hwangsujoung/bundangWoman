@@ -283,7 +283,7 @@ h5.blue_point { font-size:16px; font-weight:500; }
 
 
 /*notice*/
-.topNotice {display: ;width:100%;/*min-height: 125px;*/ background:#12224e; color:#ffffff;}
+.topNotice {width:100%;/*min-height: 125px;*/ background:#12224e; color:#ffffff;}
 .topNotice .notiWrap {overflow:hidden;position:relative;/*min-height:125px;*/width:960px;margin:0 auto;}
 .topNotice .notiWrap .noti {position: absolute;bottom:7px;right:0;height:15px;padding-right: 28px;font-size:11px;}
 .topNotice .notiWrap .noti input[type="checkbox"] {width: 13px;height: 13px;vertical-align: top;border: none; margin-top:0px;}

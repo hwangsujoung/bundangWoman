@@ -215,18 +215,24 @@ $(function(){
 	}
 	sub_title();
 	function sub_title(){
+		var top_val = 0;
+		if( $('.contents_menu_wrap').length > 0 && $('.top_tab_wrap').length > 0 ){
+			top_val = '51px';
+		}else{
+			top_val = '50%';
+		}
 		$('.prev_menu').animate({
-			'top':'50%',
+			'top':top_val,
 			'left':'0px',
 			'opacity':'1'
 		},1500,'easeOutQuint')
 		$('.next_menu').animate({
-			'top':'50%',
+			'top':top_val,
 			'right':'0',
 			'opacity':'1'
 		},1500,'easeOutQuint')
 		$('.current_menu').animate({
-			'top':'50%',
+			'top':top_val,
 			'opacity':'1'
 		},1500,'easeOutElastic')
 	}
