@@ -1,10 +1,13 @@
-﻿@charset "utf-8";
+﻿﻿@charset "utf-8";
 
 
 /* layout */
 .wrap { min-width:1060px; overflow:hidden; position:relative; }
 .modal_bg { position:fixed; width:100%; top:0; left:0; bottom:0; right:0; height:100%; display:none; background:url("../img/modal_bg.png"); z-index:200;}
 .point0{color:#ea638a !important;}
+.search_point{position: relative; display:inline !important; vertical-align: baseline !important;}
+.search_point:after{content:""; position: absolute;
+    z-index:-1; width: 100%; height: 100%; border-radius: 4px; background-color: #ffce7a; top:1px; left:-3px; padding-left:3px; padding-right:3px;}
 
 .blind { position: absolute; overflow: hidden; margin: -1px; border: 0; padding: 0; width: 1px; height: 1px; clip: rect(0 0 0 0);}
 .btnTop { cursor:pointer; display:block; opacity:0; position:fixed; width:40px; height:40px; right:20px; bottom:57px; left:56%; margin-left:446px; background-image:url("../img/btn_top.png"); background-size:38px; background-position:center; background-repeat:no-repeat;  z-index:200; }
@@ -16,7 +19,9 @@
     -moz-appearance: none;
     -o-appearance:none;
     appearance: none;
-    background: url('../img/icon_select_btn.png') no-repeat 98% 50%; }
+    background-image: url('../img/icon_select_btn.png');
+    background-repeat:no-repeat;
+    background-position: right 20px center;}
 
 .select_area select { cursor:pointer; height:36px; padding:unset; padding-left:10px; font-weight:300; font-size:16px;
     -webkit-appearance: none;
@@ -189,7 +194,7 @@ ul.dot_list02 + strong.blue {margin-top:20px;}
 strong.blue + ul.dot_list03 {margin-top:10px;}
 ul.dot_list03 {}
 ul.dot_list03 > li{padding-left:10px; line-height:26px; font-weight:400; position: relative;}
-ul.dot_list03 > li:after{content:""; position: absolute; top: 13px; left:0; width:4px; height:4px; background-color:#ea638a; border-rardius:50%; overflow: hidden;}
+ul.dot_list03 > li:after{content:""; position: absolute; top: 13px; left:0; width:4px; height:4px; background-color:#ea638a; border-radius:50%; overflow: hidden;}
 ul.dot_list03 > li > ul {padding-left:5px;}
 ul.dot_list03 > li + li {margin-top:8px;}
 ul.dot_list03.title > li + li {margin-top:18px;}
@@ -261,7 +266,7 @@ ol.num_list02 { counter-reset: counter_style0; }
 ol.num_list02 > li { counter-increment: counter_style0;  position:relative; padding-left:25px;
     font-size: 16px; font-weight: 300; font-stretch: normal; font-style: normal; line-height: 1.63; letter-spacing: -0.4px; text-align: left; color: #333333;}
 ol.num_list02 > li:before { color: #fff; content: counter(counter_style0); left:0px; position:absolute; top:5px;
-width:18px; height:18px; background-color:#ea638a; border-radius:50%; overflow: hidden; line-height:18px;
+    width:18px; height:18px; background-color:#ea638a; border-radius:50%; overflow: hidden; line-height:18px;
     font-size: 9px; font-weight: normal; font-stretch: normal; font-style: normal;
     letter-spacing: -0.23px; text-align: center;}
 
@@ -333,7 +338,8 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 
 .contents_wrap .contents_area { z-index:0; position:relative; width:1060px; margin:0 auto; padding:40px 0 80px; min-height:490px; }
 .contents_wrap.appointment .contents_menu_wrap { background:url("../img/bundangWoman/Mask Group 9.jpg"); background-repeat:no-repeat; background-position:center; }
-.contents_wrap.medical .contents_menu_wrap { background:url("../img/bundangWoman/Mask Group 9.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover;}
+.contents_wrap.appointment .contents_menu_wrap.type_2 { background:url("../img/bundangWoman/02_sub_kv.png"); background-repeat:no-repeat; background-position:center; background-size:cover;}
+.contents_wrap.medical .contents_menu_wrap{ background:url("../img/bundangWoman/02_sub_kv.png"); background-repeat:no-repeat; background-position:center; background-size:cover;}
 .contents_wrap.guide .contents_menu_wrap { background:url("../img/bundangWoman/Mask Group 9.jpg"); background-repeat:no-repeat; background-position:center; }
 .contents_wrap.introduce .contents_menu_wrap { background:url("../img/bundangWoman/Mask Group 9.jpg"); background-repeat:no-repeat; background-position:center; }
 .contents_wrap.health .contents_menu_wrap { background:url("../img/bundangWoman/Mask Group 9.jpg"); background-repeat:no-repeat; background-position:center; }
@@ -541,7 +547,7 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 .popup_div .sub_tab_area .sub_tab_list li a { font-size:16px; color:#333; font-weight:400; border-bottom:2px solid #fef5f1; padding-bottom:2px; }
 .popup_div .sub_tab_area .sub_tab_list li.on a { color:#f75381; border-bottom:2px solid #f75381; font-weight:700; font-size:16px; }
 .popup_div .sub_tab_wrap .sub_tab_area .sub_tab_list li.on a,.popup_div .sub_tab_wrap .sub_tab_area .sub_tab_list li:hover a { padding-bottom:2px; color:#f75381; font-weight:500; border-bottom:2px solid #f75381; }
-.popup_div .btn_area a + a { margin-left:5px; }
+.popup_div .btn_area a + a { margin-left:10px; }
 
 /* top_sub_tab_wrap  */
 .top_sub_tab_wrap { margin-top:60px; }
@@ -650,7 +656,7 @@ input.h36 { height:36px; }
 .table_type05 thead tr + tr th { height:auto; padding:4px 0; line-height:26px; }
 .table_type05 tbody tr th .essential { color:#ea638a; }
 .table_type05 tbody tr th.tal { padding-left:30px; }
-.table_type05 tbody tr th { font-weight:500; color:#111111; height:40px; box-sizing:border-box; font-size:16px; text-align:center; padding:5px 0; line-height:normal; border-bottom:1px solid #ccc; }
+.table_type05 tbody tr th{font-weight:500; color:#111111; height:46px; box-sizing:border-box; font-size:16px; text-align:center; padding:5px 0; line-height:normal; border-bottom:1px solid #ccc; }
 .table_type05 tbody tr td { font-weight:300; color:#333; height:40px; box-sizing:border-box; font-size:16px; text-align:center; padding:5px 0; line-height:normal; border-bottom:1px solid #ccc; }
 .table_type05 .va_t { vertical-align:top; padding-top:11px; }
 
@@ -807,10 +813,12 @@ input.h36 { height:36px; }
 .table_wrap .table_area table.table_type02{ border-top:1px solid #988f87; /*border-bottom:1px solid #ccc;*/}
 .table_wrap .table_area table.table_type02 tbody {}
 .table_wrap .table_area table.table_type02 tbody tr {}
-.table_wrap .table_area table.table_type02 tbody tr th {padding:14px 30px; text-align:left; color:#333; vertical-align:middle;}
+.table_wrap .table_area table.table_type02.width180 tbody tr th {padding:16px 30px; text-align:center; vertical-align:middle; background-color:#f5f5f5; box-sizing: border-box;
+    font-size: 16px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: 24px; letter-spacing: -0.4px; color: #111111; height:40px;}
 .table_wrap .table_area table.table_type02 tbody tr th .essential {color:#ea638a;}
 .table_wrap .table_area table.table_type02 tbody tr {}
-.table_wrap .table_area table.table_type02 tbody tr td{padding-top:5px; padding-bottom:5px; text-align:left; color:#333; font-weight:300;}
+.table_wrap .table_area table.table_type02 tbody tr td{padding:16px 30px; text-align:left; vertical-align: middle; box-sizing: border-box;
+    font-size: 16px; font-weight: 300; font-stretch: normal; font-style: normal; line-height: 24px; letter-spacing: -0.4px; color: #333333;}
 .table_wrap .table_area table.table_type02 tbody tr.tac th { text-align:center; }
 .table_wrap .table_area table.table_type02 tbody tr.tac td { text-align:center; }
 
@@ -865,7 +873,7 @@ input.h36 { height:36px; }
 .table_wrap .table_area table.table_type_schedule tbody tr {}
 .table_wrap .table_area table.table_type_schedule tbody tr th { height:40px; border:1px solid #fff; text-align:center; background:#f5f5f5; font-weight:400; color:#111; box-sizing:border-box; vertical-align:middle; }
 .table_wrap .table_area table.table_type_schedule tbody tr td { height:40px; border:1px solid #fff; text-align:center; background:#fff5ee ; font-weight:300; color:#666; line-height:36px; box-sizing:border-box; }
-.table_wrap .table_area table.table_type_schedule tbody tr td img{}
+.table_wrap .table_area table.table_type_schedule tbody tr td img{vertical-align: middle;}
 .table_wrap .table_area table.table_type_schedule tbody tr td .dot{width:10px; height:10px; display:inline-block; vertical-align: middle; border-radius:50%; overflow: hidden; background-color:#ea638a; behavior:url(PIE.htc);}
 
 .table_wrap .table_area .prev_next_view {border-top:1px solid #ccc;}
@@ -880,7 +888,7 @@ input.h36 { height:36px; }
 .table_wrap .table_area .prev_next_view table tbody tr td strong {color:#111; font-weight:500; }
 
 .table_wrap .table_area .search_none{border-top:2px solid #988f87; border-bottom:1px solid #ccc; height:274px; box-sizing:border-box; }
-.table_wrap .table_area .search_none .title { margin-top:50px; padding-top:99px; color:#111; font-size:19px; text-align:center; background:url("../img/icon_search_none.png") no-repeat center 0; font-weight:500; }
+.table_wrap .table_area .search_none .title {margin-top:50px; padding-top:99px; color:#111; font-size:20px; text-align:center; background:url("../img/bundangWoman/search_none.png") no-repeat center 0; font-weight:500; }
 .table_wrap .table_area .search_none .desc { margin-top:3px; color:#666; font-weight:400; line-height:26px; text-align:center; }
 
 /* table btn */
@@ -896,7 +904,7 @@ input.h36 { height:36px; }
 /* btn_area */
 .btn_area { text-align:center; margin-top:25px; font-size:0; }
 .btn_area:after { clear:both; content:''; display:block; }
-.btn_area a { display:inline-block; cursor:pointer; box-sizing:border-box; min-width:123px; background:#fff; color:#333; border:1px solid #ccc; padding:9px 15px 8px 15px; font-weight:400; text-align:center; line-height:1; font-size:16px; }
+.btn_area a { display:inline-block; cursor:pointer; box-sizing:border-box; min-width:123px; background:#fff; color:#333; border:1px solid #ccc; padding:9px 15px 8px 15px; font-weight:400; text-align:center; line-height:1; font-size:16px; border-radius:25px; overflow: hidden;}
 .btn_area .btn_ok{cursor:pointer; min-width:121px; padding:9px 15px 8px 15px; font-weight:400; text-align:center; box-sizing:border-box; background:#ea638a; border:1px solid #ea638a; color:#fff !important; line-height:1; }
 .btn_area a.btn_ok{background:#ea638a; border:1px solid #ea638a; color:#fff !important; font-size:16px; }
 .btn_area a.btn_list {position:absolute; width:172px; text-indent:23px; top:50px; right:0px; background:url("../img/btn_list_icon.png") 15px 50% no-repeat;}
@@ -922,9 +930,10 @@ input.h36 { height:36px; }
 
 .popup_div .btn_area.type_2{margin-top:40px;}
 .popup_div .btn_area.type_2 a{min-width:160px; padding-top:15px; padding-bottom:17px; border-radius:25px; padding-right:0; padding-left:0;}
-.popup_div .btn_area.type_2.small a{padding-top:10px; padding-bottom:12px;}
+.popup_div .btn_area.type_2.small a{padding-top:11px; padding-bottom:12px;}
+.popup_div .btn_area.type_2.big a{width:250px;}
 
-.apply_btn { display:inline-block; font-size:15px; padding:0 10px; height:30px; line-height:30px; background:#ea638a; border:0; cursor:pointer;font-weight:300; vertical-align:middle; margin-left:6px; box-sizing:border-box; min-width:70px; color:#fff; }
+.apply_btn { display:inline-block; font-size:15px; padding:0 10px; height:30px; line-height:30px; background:#ea638a; border:0; border-radius:20px; cursor:pointer;font-weight:300; vertical-align:middle; margin-left:6px; box-sizing:border-box; min-width:70px; color:#fff; }
 
 
 /* paging_wrap */
@@ -941,8 +950,8 @@ input.h36 { height:36px; }
 .paging_wrap .paging_area .paging a:nth-child(1) { margin:0 3px 0 0 ; }
 .paging_wrap .paging_area .paging a:last-child { margin:0 0 0 3px; }
 .paging_wrap .paging_area .paging a.first span {text-indent:-9999px;}
-.paging_wrap .paging_area .paging a.prev { background:url("../img/icon_paging_prev.gif") no-repeat center; background-size:28px; margin-right:20px;}
-.paging_wrap .paging_area .paging a.next { background:url("../img/icon_paging_next.gif") no-repeat center; background-size:28px; margin-left:20px;}
+.paging_wrap .paging_area .paging a.prev { background:url("../img/icon_paging_prev.gif") no-repeat center; background-size:28px; margin-right:15px;}
+.paging_wrap .paging_area .paging a.next { background:url("../img/icon_paging_next.gif") no-repeat center; background-size:28px; margin-left:15px;}
 .paging_wrap .paging_area .paging a.last { background:url("../img/icon_paging_last.gif") no-repeat center; background-size:28px; }
 .paging_wrap .paging_area .paging a.on { background:#ea638a; border:1px solid #ea638a; color:#fff;}
 
@@ -1631,7 +1640,10 @@ input.h36 { height:36px; }
 h2 + .search_center_list { margin-top:40px; }
 .search_center_list {overflow:hidden; width:100%; height:auto; }
 .search_center_list + .search_center_list { margin-top:40px; }
-.search_center_list .h3_wrap h3 { color:#222; font-size:20px; font-weight:500; padding-bottom:12px; }
+.search_center_list .h3_wrap{padding-bottom:12px;}
+.search_center_list .h3_wrap h3{color:#222; font-size:22px; line-height:28px; font-weight:500; display:inline-block; vertical-align: middle; margin-right:26px;}
+.search_center_list .h3_wrap .medical_search_btn_con{font-size: 16px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: 1.37; letter-spacing: -0.4px; text-align: center; color: #07335b;
+    display:inline-block; vertical-align: middle;}
 .search_center_list ul { border-top:2px solid #988f87; padding-top:20px; border-bottom:1px solid #ccc; }
 .search_center_list ul:after { clear:both; content:''; display:block; }
 .search_center_list ul li { width:192px; height:202px; margin-bottom:25px;  box-sizing:border-box; float:left; position:relative; }
@@ -1688,7 +1700,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab { position:relative; float:right; padding-right:24px; margin-top:12px; }
 .medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab:after {clear:both; display:block; content:'';}
 .medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab.on {}
-.medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab a { float:left; display:block; position:relative; font-weight:400; color:#ea638a;}
+.medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab a { float:left; display:block; position:relative; font-weight:400; color:#ff435a;}
 .medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab a.btn_arr { float:none; padding-left:0; margin-left:0; position:absolute; right:0px; top:5px; width:14px; height:8px; background:url("../img/bundangWoman/icon_schedule_tab_off.png") no-repeat right center; }
 .medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab a.btn_arr:after {  display:none;}
 .medical_schedule_wrap .medical_schedule_area .medical_schedule_list .medical_schedule_con_area .schedule_btn_tab .schedule_tab.on a.btn_arr { background:url("../img/bundangWoman/icon_schedule_tab_on.png") no-repeat right center;}
@@ -1723,25 +1735,33 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .medical_list_wrap .top_area + .line_list_dl_area { margin-top:40px; }
 .medical_list_wrap .line_list_dl_area .line_list_dl + .line_list_dl { margin-top:60px;  }
 
+
+.medical_search_header_con{font-size:0; line-height:0;}
+.medical_search_header_con .medical_search_title{  font-size: 22px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: 28px; letter-spacing: -0.55px; text-align: left; color: #222222;
+    display:inline-block; vertical-align: middle; margin-right:27px;}
+.medical_search_header_con .medical_search_btn_con{font-size: 16px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: 22px; letter-spacing: -0.4px; text-align: center; color: #07335b;
+    display:inline-block; vertical-align: middle; margin-top:2px;}
+
 /* 쉬운 진료과 찾기 */
 .medical_easy_wrap { width:100%; }
 .medical_easy_wrap .search_wrap { margin-top:40px; }
 .medical_easy_wrap .search_wrap .input_area { margin-left:0; }
 .contents_area .search_wrap .select_area { float:left; min-width:130px; width:auto; }
-.contents_area .search_wrap .select_area select{ height:50px; padding:10px 20px 10px; line-height:1; border-radius:25px; overflow: hidden;}
+.contents_area .search_wrap .select_area select{height:50px; padding:10px 20px 10px; line-height:1; border-radius:25px; overflow: hidden; width:200px;}
 .contents_area .search_wrap .search_area .select_area + .input_area { margin-left:5px; }
 .contents_area .search_wrap .search_area .input_area.search_input .faq_input{width:460px; border-radius:25px; overflow: hidden;}
 .contents_area .search_wrap .search_area .input_area.search_input a + a { margin-left:5px; }
 .contents_area .search_wrap .search_area .input_area.search_input .btn_reset { margin-left:5px; cursor:pointer; width:100px; height:46px; padding:11px 12px; background:#fff; border:1px solid #ccc; font-weight:400; font-size:16px; position:static; box-sizing:border-box; color:#333; text-indent:0; line-height:normal; text-align:center; display:inline-block; }
-.medical_easy_wrap .disease_list { text-align:center; margin-top:14px; font-size:0; }
+.medical_easy_wrap .disease_list{text-align:center; margin-top:20px; font-size:0; }
 .medical_easy_wrap .search_center_list { margin-top:40px; }
-.medical_easy_wrap .search_center_list .search_center { width:100%; padding:24px 30px 15px; box-sizing:border-box; border-top:2px solid #988f87; border-bottom:1px solid #ccc; }
+.medical_easy_wrap .search_center_list .search_center{width:100%; padding:24px 40px 11px; box-sizing:border-box; border-top:2px solid #988f87; border-bottom:1px solid #ccc; }
 .medical_easy_wrap .search_center_list .search_center .dot_list01 { border:0; padding:0; width:100%; }
-.medical_easy_wrap .search_center_list .search_center .dot_list01 > li { cursor:pointer; width:33.3%; height:auto; margin:0; margin-bottom:11px; line-height:24px; }
+.medical_easy_wrap .search_center_list .search_center .dot_list01 > li{cursor:pointer; width:33.3%; height:auto; margin:0; margin-bottom:19px; line-height:24px;
+    font-size:20px; font-weight:500;}
 .medical_easy_wrap .search_center_list .search_center .dot_list01 > li:hover { color:#ea638a; background: url(../img/icon_matter_list_dot.png); background-repeat:no-repeat; background-position:0 12px; }
-.medical_easy_wrap .search_result { text-align:center; margin-top:40px; background:#fff3e1; padding:15px 30px; box-sizing:border-box; width:100%; font-weight:500; color:#222; font-size:20px; line-height:26px; }
+.medical_easy_wrap .search_result{text-align:center; margin-top:30px; background:#fff3e1; padding:22px 30px; box-sizing:border-box; width:100%; font-weight:500; color:#222; font-size:20px; line-height:26px; }
 .medical_easy_wrap .search_result + .doctor_list_wrap { margin-top:40px; }
-.disease_list li {width:36px; height:36px; display:inline-block; line-height:36px; text-align:center; cursor:pointer; font-size:16px; font-weight:200; background:#e6e6e6; border-radius:50%; color:#666; margin-left:10px; }
+.disease_list li {width:46px; height:46px; display:inline-block; line-height:46px; text-align:center; cursor:pointer; font-size:16px; font-weight:200; background:#e6e6e6; border-radius:50%; color:#666; margin-left:10px; }
 .disease_list li:first-child { margin-left:0; }
 .disease_list li.on {background:#ea638a; color:#fff; }
 .disease_list li:hover {background:#ea638a; color:#fff; }
@@ -1794,7 +1814,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .medical .counseling_wrap .special_wrap .table_type01 tbody td a { display:block; width:100%; cursor:pointer; box-sizing:border-box; padding-left:24px; line-height:30px; font-size:16px; }
 .medical .counseling_wrap .special_wrap .table_type01 tbody td a.lock { background: url("../img/icon_lock.png"); background-repeat:no-repeat; background-position:0 center; background-size:21px; }
 .medical .counseling_wrap .special_wrap .counsel_box_area + .table_wrap + .paging_wrap { margin-top:30px; }
-.medical .counseling_wrap .special_wrap .paging_wrap + .btn_area { position:absolute; bottom:-2px; right:0; }
+.medical .counseling_wrap .special_wrap .paging_wrap + .btn_area { position:absolute; bottom:0px; right:0; }
 .medical .counseling_wrap .special_wrap .table_desc + .search_none { margin-top:10px; height:252px; }
 .medical .counseling_wrap .special_wrap .table_desc + .search_none .title { margin-top:40px; }
 .medical .counseling_wrap .special_wrap  .table_wrap + .btn_area  { position:absolute; bottom:0; right:0; }
@@ -1808,6 +1828,8 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .counseling_write_area .table_wrap .table_type05 .reserve_contents_box{font-size: 16px; padding-top:20px; padding-bottom:20px; padding-right:30px; padding-left:30px; box-sizing: border-box;;
     font-weight: 300; font-stretch: normal; font-style: normal; line-height: 1.63; letter-spacing: -0.4px; text-align: left; color: #333333;}
 .counseling_write_area .table_wrap .table_type05 .reserve_contents_box span{font-weight: normal; color: #111111;}
+.counseling_write_area .table_wrap .table_type05 .reserve_gray_box{ font-size: 16px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: 1.63; letter-spacing: -0.4px; text-align: center; color: #111111;
+    background-color: #f9f9f9; padding-top:35px; padding-bottom:35px;}
 .counseling_write_area .table_wrap .table_type05 .reserve_user_box{text-align: center; font-size:0; line-height:0; padding-top:10px; padding-bottom:10px;}
 .counseling_write_area .table_wrap .table_type05 .reserve_user_box span{display:inline-block; vertical-align: middle;
     font-size: 16px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: 22px; letter-spacing: -0.4px; color: #111111}
@@ -2065,7 +2087,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .contents_wrap.appointment .search_wrap + .app_schedule_wrap { margin:40px auto 0; }
 .contents_wrap.appointment .pattern_bg_wrap + .app_schedule_wrap { margin-top:40px; }
 .contents_wrap.appointment .app_schedule_wrap .table_wrap { margin-top:0; }
-.contents_wrap.appointment .medical_schedule_wrap .h3_wrap h3 { color:#222; font-size:20px; font-weight:500; padding-bottom:12px; }
+.contents_wrap.appointment .medical_schedule_wrap .h3_wrap h3{ color:#222; font-size:22px; font-weight:500; padding-bottom:15px; }
 
 /* reservation_wrap 진료예약 안내 */
 .reservation_wrap { width:100%; }
@@ -2085,9 +2107,9 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico01 { background:url("../img/bundangWoman/icon_reservation_first.png") no-repeat center bottom; }
 .contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico02 { background:url("../img/bundangWoman/icon_reservation_online.png") no-repeat center bottom; }
 .contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico03 { background:url("../img/bundangWoman/icon_reservation_normal.png") no-repeat center bottom; }
-.contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico04 {font-size:16px; height:76px; background:url("../img/icon_membership_box01.png") no-repeat 48% 13px;}
-.contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico05 {font-size:16px; height:76px; background:url("../img/icon_membership_box08.png") no-repeat 47% 13px;}
-.contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico06 {font-size:16px; height:76px; background:url("../img/icon_membership_box09.png") no-repeat center bottom;}
+.contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico04 {font-size:16px; height:76px; background:url("../img/ico_membership_box01.png") no-repeat 48% 13px;}
+.contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico05 {font-size:16px; height:76px; background:url("../img/ico_membership_box08.png") no-repeat 47% 13px;}
+.contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.box_ico06 {font-size:16px; height:76px; background:url("../img/ico_membership_box09.png") no-repeat center bottom;}
 .contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title.line02 { padding:0px 0px 0px 0px;}
 .contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_title strong { font-size:16px; color:#ea638a; font-weight:400; }
 .contents_area .reservation_wrap .reservation_area .reservation_box_area .reservation_box .reservation_box_desc { margin-top:28px; line-height:22px; color:#666; }
@@ -2106,6 +2128,8 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .popup_area .popup_intro_box_wrap{padding-top:28px; padding-left:40px; padding-right:40px; padding-bottom:30px; border:1px solid #ccc; border-top:2px solid #ea638a;}
 .popup_area .popup_intro_box_wrap.type_2{padding-top:58px; padding-bottom:53px;}
 .popup_area .popup_intro_box_wrap.type_3{padding-top:40px; padding-bottom:40px;}
+.popup_area .popup_intro_box_wrap.type_4{padding-top:27px; padding-bottom:40px;}
+.popup_area .popup_intro_box_wrap.type_4 .popup_title_desc{font-size: 15px; font-weight: 300; font-stretch: normal; font-style: normal; line-height: 1.73; letter-spacing: -0.38px; text-align: left; color: #333333;}
 .popup_area .popup_intro_title_con{padding-bottom:20px; border-bottom:1px solid #cccccc;}
 .popup_area .popup_intro_box_wrap.type_2 .popup_intro_title_con{border-bottom:none; padding-bottom:0;}
 .popup_area .popup_intro_title_con.mb90{margin-bottom:90px;}
@@ -2144,8 +2168,8 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap:after {clear:both; display:block; content:'';}
 .popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio { float:right; margin-top:9px; font-size:15px; }
 .popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio:after { clear:both; display:block; content:''; }
-.popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio { float:left; margin-left:10px; }
-.popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio label { font-weight:400; }
+.popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio{float:left; margin-left:10px; }
+.popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio label{font-weight:300;}
 .popup_area .reserve_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio:first-child { margin-left:0px; }
 .popup_area .reserve_wrap .agreement_area .agreement_box .txt_area { color:#333; font-weight:400; line-height:20px; }
 .popup_area .reserve_wrap .agreement_area .box_blue input[type*="checkbox"].check_d + label:after { top:0; }
@@ -2184,8 +2208,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .popup_area .reserve_wrap .step_wrap .step_con_area .step_con.on {display:block; width:100%;}
 .popup_area #divStep02.reserve_wrap .popup_con .popup_line_box:first-child .input_radio_area .input_radio { margin-bottom:20px; }
 .popup_area #divStep02.reserve_wrap .popup_con .popup_line_box:first-child .popup_line_box_con { padding:20px 20px 0 20px; }
-.popup_area #divStep02.reserve_wrap .popup_con .divTabContent01.no_line { width:100%; box-sizing:border-box; }
-.popup_area #divStep02.reserve_wrap .popup_con .divTabContent01.no_line { padding:20px 20px 0 0; }
+.popup_area #divStep02.reserve_wrap .popup_con .divTabContent01.no_line { width:100%; box-sizing:border-box; padding-top:15px;}
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent01.no_line .input_radio{float:left; text-align:left; box-sizing:border-box; }
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent01.no_line .input_radio:first-child{padding-left:20px;}
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent01.no_line .input_radio input[type="radio"]{}
@@ -2193,7 +2216,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent02 { display:none; }
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent02.no_line { display:none; width:100%; text-align:center; box-sizing:border-box; padding:28px 0 30px; }
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent02.no_line p { font-weight:400; color:#666; margin-bottom:14px; }
-.popup_area #divStep02.reserve_wrap .popup_con .divTabContent02.no_line .search_wrap .search_area .input_area.search_input .faq_input { width:220px; height:34px; padding:5px 10px; }
+.popup_area #divStep02.reserve_wrap .popup_con .divTabContent02.no_line .search_wrap .search_area .input_area.search_input .faq_input { width:220px; height:34px; padding:5px 10px; border-radius:20px; overflow: hidden;}
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent02.no_line .search_wrap .search_area .input_area.search_input a.btn_search { width:73px; height:34px; font-size:15px; padding:7px 0; }
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent02.no_line .search_wrap .search_area .input_area.search_input a.btn_search { width:73px; height:34px; font-size:15px; padding:7px 0; }
 .popup_area #divStep02.reserve_wrap .popup_con .divTabContent02 .table_wrap { width:100%; height:408px; display:table; margin-top:0; }
@@ -2202,8 +2225,10 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .popup_area #divStep02.reserve_wrap .popup_con .popup_line_box .popup_line_box_con { padding:0; border-top:1px solid #ccc;}
 .popup_area .popup_con .popup_link_title_box{width:100%; margin-top:20px; height:42px;}
 .popup_area .popup_con .popup_link_title_box:after { clear:both; content:''; display:block; }
-.popup_area .popup_con .popup_line_box.double { cursor:pointer; z-index:1; position:relative; margin:-1px 0 0 -1px; box-sizing:border-box; width:50.08%; float:left; border-top:2px solid #ccc; }
-.popup_area .popup_con .popup_line_box.double.on { z-index:2; border:1px solid #ea638a; border-top:2px solid #ea638a; }
+.popup_area .popup_con .popup_line_box.double{cursor:pointer; z-index:1; position:relative; margin:0; box-sizing:border-box; width:50%; float:left; border-top:3px solid #ea638a; border-left:none;}
+.popup_area .popup_con .popup_line_box.double:first-child{border-right:1px solid #ea638a;}
+.popup_area .popup_con .popup_line_box.double.on { z-index:2; border:1px solid #ea638a; border-left:none; border-top:3px solid #ea638a; }
+.popup_area .popup_con .popup_line_box.double.on:first-child{border-left:1px solid #ea638a;}
 .popup_area .popup_con .popup_line_box.double.on .popup_line_box_title { color:#ea638a; }
 .popup_area .popup_con .popup_line_box.double .popup_line_box_title { border-bottom:none; text-align:center; }
 .popup_area .popup_con .popup_line_box .popup_line_box_title.no_line { border:none; padding:0;}
@@ -2212,6 +2237,18 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .popup_line_box .popup_line_box_con .doctor_list_area .doctor_list { float:left; margin:0px 0 0 0px; padding:20px; position:relative; box-sizing:border-box; width:50%; }
 .popup_line_box .popup_line_box_con .doctor_list_area .doctor_list:hover { background:#ffeef3; }
 .popup_line_box .popup_line_box_con .doctor_list_area .doctor_list:after {clear:both; display:block; content:'';}
+
+.input_radio_contents_con{padding-right:20px; padding-left:20px; box-sizing: border-box; height: 350px; border-top:1px solid #cccccc; background-color: #fff; overflow-y:auto;
+    padding-top:24px; padding-bottom:24px;}
+.input_radio_contents_con .input_radio_list_con{position: relative;}
+.input_radio_contents_con .input_radio_list_con > li{overflow: hidden; margin-top:15px;}
+.input_radio_contents_con .input_radio_list_con > li:first-child{margin-top:0;}
+.input_radio_contents_con .input_radio_list_con > li .input_radio_contents_title{font-size:15px; line-height:24px; background-color:#ea638a; border-radius:50%; overflow: hidden; color:#fff; display:inline-block; width:24px; height:24px; box-sizing: border-box; text-align: center;
+    float:left;}
+.input_radio_contents_con .input_radio_list_con > li .input_radio_contents_inner{overflow: hidden; padding-left:25px; box-sizing: border-box;}
+.input_radio_contents_con .input_radio_list_con > li .input_radio_contents_inner .input_radio{width:25%; margin-bottom:10px;}
+.popup_area #divStep02.reserve_wrap .popup_con .divTabContent01.no_line .input_radio_contents_con .input_radio_list_con .input_radio:first-child{padding-left:0;}
+
 
 .popup_line_box .popup_line_box_con .doctor_list_area .doctor_list .pic_area {float:left; width:94px; height:108px; overflow:hidden; position:relative;}
 .popup_line_box .popup_line_box_con .doctor_list_area .doctor_list .pic_area img {width:100%; position:absolute; bottom:0;height:109px;}
@@ -2360,16 +2397,16 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box { margin-top:16px; }
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box:after {clear:both; display:block; content:'';}
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box > label { float:left; width:124px; font-weight:500; color:#111; }
-.contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box { float:left; margin-top:0; }
+.contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box { margin-top:0; overflow: hidden;}
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list {margin-top:15px; }
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list:first-child {margin-top:0px;}
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list:after {clear:both; display:block; content:'';}
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dt { float:left; }
-.contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dd { float:left; margin-left:10px; }
+.contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dd { padding-left:10px; overflow: hidden;}
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dd .input_radio { width:auto; float:left; margin-right:15px;  font-weight:300; }
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dd .input_radio.last_child { margin-right:0; }
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dd .input_radio span {color:#ea638a; }
-.contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dd .input_radio.same_width { width:196px; }
+.contents_area .reservation_wrap .reservation_area .fast_reservation_area .write_box_area .write_radio_box .write_box .write_radio_list dd .input_radio.same_width{width:192px;}
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .dot_list01 { margin-top:15px; }
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .dot_list01 li { color:#666; }
 .contents_area .reservation_wrap .reservation_area .fast_reservation_area .agreement_box { margin-top:35px; }
@@ -2477,7 +2514,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 /* 1:1 전문의 상담 */
 .online_wrap .search_center_list { margin-top:40px; }
 .online_wrap .counsel_box_area + .search_wrap { margin-top:40px; }
-.contents_area .online_wrap .counsel_box_area { padding:20px 0 20px 120px; border:1px solid #ccc; border-top:3px solid #ea638a; text-align:center; margin-top:40px; }
+.contents_area .online_wrap .counsel_box_area{padding:20px 0 20px 120px; border:1px solid #ccc; border-top:2px solid #ea638a; text-align:center; margin-top:40px; }
 .contents_area .online_wrap .counsel_box_area .counsel_box { display:block; width:100%; height:100%; }
 .contents_area .online_wrap .counsel_box_area .counsel_box:after { clear:both; display:block; content:''; }
 .contents_area .online_wrap .counsel_box_area .counsel_box .pic_area { float:left; margin-right:40px; width:140px; height:162px; }
@@ -2496,6 +2533,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .contents_area .online_wrap .counsel_box_area .counsel_box .doctor_con_area .doctor_status li.major { clear:both; margin-top:13px; }
 .contents_area .online_wrap .counsel_box_area .counsel_box .doctor_con_area .doctor_status li.major strong { position:absolute; }
 .contents_area .online_wrap .counsel_box_area .counsel_box .doctor_con_area .doctor_status li.major span { display:inline-table; margin-left:65px; box-sizing:border-box; width:622px; line-height:22px; margin-top:-2px; }
+.contents_area .online_wrap .table_wrap .table_area .table_desc .desc_right .select_area select{border-radius:20px; overflow: hidden; padding-left:15px; background-position: top 11px right 15px;}
 .online_wrap .special_wrap { position:relative; }
 .online_wrap .special_wrap .table_wrap{margin-top:30px; }
 .online_wrap .special_wrap .table_desc + .table_type01 { margin-top:10px; }
@@ -2507,8 +2545,9 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .online_wrap .special_wrap .table_type01 tbody td a.lock { background: url("../img/bundangWoman/padlock.png"); background-repeat:no-repeat; background-position:0 center; background-size:21px; }
 .online_wrap .special_wrap .counsel_box_area + .table_wrap + .paging_wrap { margin-top:30px; }
 .online_wrap .special_wrap .table_wrap + .btn_area  { position:absolute; bottom:0; right:0; }
+.online_wrap .special_wrap .table_wrap + .btn_area.bt30  {bottom:30px;}
 .online_wrap .special_wrap .counsel_box_area + .table_wrap + .paging_wrap { margin-top:30px; }
-.online_wrap .special_wrap .paging_wrap + .btn_area { position:absolute; bottom:-8px; right:0; }
+.online_wrap .special_wrap .paging_wrap + .btn_area { position:absolute; bottom:0; right:0; }
 .online_wrap .table_wrap .table_desc + .search_none { margin-top:10px; height:273px; }
 .online_wrap .table_wrap .table_desc + .search_none .title{ margin-top:50px; }
 .online_wrap .special_wrap  .table_wrap + .btn_area  { position:absolute; bottom:0; right:0; }
@@ -2709,12 +2748,12 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 /* 병원둘러보기 */
 .guide_wrap .view_wrap { width:100%; height:auto; }
 .guide_wrap .view_wrap:after { clear:both; content:''; display:block; }
-/* .guide_wrap .view_tab { float:left; width:170px; height:100%; padding:152px 30px 0; background-image:url("../img/bg_view_hospital.jpg"); background-repeat:no-repeat; box-sizing:border-box; } 
+/* .guide_wrap .view_tab { float:left; width:170px; height:100%; padding:152px 30px 0; background-image:url("../img/bg_view_hospital.jpg"); background-repeat:no-repeat; box-sizing:border-box; }
 .guide_wrap .view_tab li { color:#111; font-weight:400; width:110px; height:40px; line-height:40px; text-align:center; border-radius:20px; cursor:pointer; margin-top:17px; }
 .guide_wrap .view_tab li:hover { background:#e6e6e6; }
 .guide_wrap .view_tab li.on { background:#ea638a; color:#fff; font-weight:500; }
-.guide_wrap .view_cnt_wrap { float:right; width:890px; height:100%; padding:56px 60px 60px; box-sizing:border-box; } 
-.guide_wrap .view_cnt_wrap .view_cnt { display:none; position:relative; width:100%; height:100%;} 
+.guide_wrap .view_cnt_wrap { float:right; width:890px; height:100%; padding:56px 60px 60px; box-sizing:border-box; }
+.guide_wrap .view_cnt_wrap .view_cnt { display:none; position:relative; width:100%; height:100%;}
 .guide_wrap .view_cnt_wrap .view_cnt.on {display:block;}
 .guide_wrap .view_cnt_wrap .view_cnt h3 { font-size:28px; font-weight:500; color:#111; line-height:1; margin-bottom:9px; }
 .guide_wrap .view_cnt_wrap .view_cnt .txt { line-height:22px; }
@@ -3047,7 +3086,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .board_div .table_area .table_desc p { padding-top:0 }
 .board_div .table_type01 { margin-top:14px; }
 .board_div .table_desc + .table_type01 { margin-top:10px; }
-.board_div .paging_wrap + .btn_area { position:absolute; bottom:-2px; right:0; }
+.board_div .paging_wrap + .btn_area { position:absolute; bottom:0px; right:0; }
 .board_div .paging_wrap + .btn_area#ctl00_ContentPlaceHolder1_divList { bottom:60px; width:100%; right:auto; }
 .filebox  { width:auto; display:inline-block; float:left; }
 .filebox input[type="file"] { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
@@ -3194,7 +3233,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .contents_area .hospital_wrap .table_wrap td .voice_filebox .upload_name::-moz-placeholder { font-size:15px; font-weight:300; color:#f75381; }
 .contents_area .hospital_wrap .table_wrap td .voice_filebox .upload_name:-ms-input-placeholder { font-size:15px; font-weight:300; color:#f75381; }*/
 
-/* 의료그룹 차병원 
+/* 의료그룹 차병원
 .hospital_wrap2 { width:100%; }
 .hospital_wrap2 h2 { display:block; font-size:34px; line-height:44px; }
 .hospital_wrap2 h2 span { margin-top:6px; }
@@ -3237,7 +3276,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .hospital_wrap2 .sub_desc_area.gray_box ul li a { display:block; width:100%; height:100%; transition:all 0.5s ease; }
 .hospital_wrap2 .sub_desc_area.gray_box ul li a:hover { color:#f75381; }
 .hospital_wrap2 .cms .procedure_list { margin-top:40px; } */
-/* 글로벌 네트워크 
+/* 글로벌 네트워크
 .hospital_wrap2 .network_area { width:100%; }
 .hospital_wrap2 .network_area .map_area { width:100%; position:relative; height:528px; margin-top:20px; z-index:0; }
 .hospital_wrap2 .network_area .map_area .bg { position:absolute; width:100%; height:322px; top:82px; left:0; background:#d9eef9; z-index:0; }
@@ -3290,7 +3329,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .hospital_wrap2.member_area .line_list_dl_area .small_list > ul > li:first-child { margin-left:0; }
 .hospital_wrap2.member_area .line_list_dl_area .small_list_last { width:100%; } */
 
-/* 난임의학 연구실 소개 
+/* 난임의학 연구실 소개
 .hospital_wrap2.research_area { width:820px; margin:0 auto; }
 .hospital_wrap2.research_area .txt_box + .txt_box { margin-top:47px; }
 .hospital_wrap2.research_area h2 { padding-bottom:43px; }
@@ -3335,7 +3374,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .popup_area .popup_title_area .popup_close { display:block; position:absolute; right:-1px; top:-2px; width:25px; height:25px; background:url("../../asset/img/bundangWoman/popup_close_icon.png") no-repeat center center; }
 
 .popup_area .popup_con .popup_line_box {border:1px solid #ccc; border-top:3px solid #ea638a; margin-top:20px;}
-.popup_area .popup_con .popup_line_box.gray_line {border:1px solid #ccc; border-top:3px solid #988f87; margin-top:20px; }
+.popup_area .popup_con .popup_line_box.gray_line{border:1px solid #ccc; border-top:2px solid #988f87; margin-top:20px; }
 .popup_area .popup_con .popup_line_box.gray_line:first-child { margin-top:0; }
 .popup_area .popup_con .popup_line_box.no_line {border-top:none;}
 .popup_area .popup_con .popup_line_box .popup_line_box_title{position:relative; padding:11px 18px 10px 18px; color:#111; font-weight:500; height:39px; box-sizing:border-box; }
@@ -3407,9 +3446,9 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .mb_wrap .mb_area .mb_box_area .mb_box { float:left; width:33.33%; height:164px; box-sizing:border-box; text-align:center; border-left:1px solid #ccc; display:table; }
 .mb_wrap .mb_area .mb_box_area .mb_box:first-child { border-left:0px; }
 .mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title { box-sizing:border-box; height:118px; margin-top:22px; padding-top:9px; font-size:16px; color:#111; font-weight:500; }
-.mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title.box_ico04 { font-size:16px; height:76px; background:url("../img/icon_membership_box01.png") no-repeat center bottom; background-size:49px 48px; }
-.mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title.box_ico05 { font-size:16px; height:76px; background:url("../img/icon_membership_box05.png") no-repeat center bottom; background-size:49px 48px; }
-.mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title.box_ico06 { font-size:16px; height:76px; background:url("../img/icon_membership_box06.png") no-repeat center bottom; background-size:49px 48px; }
+.mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title.box_ico04 { font-size:16px; height:76px; background:url("../img/ico_membership_box01.png") no-repeat center bottom; background-size:49px 48px; }
+.mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title.box_ico05 { font-size:16px; height:76px; background:url("../img/ico_membership_box05.png") no-repeat center bottom; background-size:49px 48px; }
+.mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title.box_ico06 { font-size:16px; height:76px; background:url("../img/ico_membership_box06.png") no-repeat center bottom; background-size:49px 48px; }
 .mb_wrap .mb_area .mb_box_area .mb_box .mb_box_title.line02 {padding:0px 0px 0px 0px;}
 .mb_wrap .mb_area .mb_box_area .mb_box .mb_box_btn { margin-top:14px; }
 .mb_wrap .mb_area .mb_box_area .mb_box .mb_box_btn a { display:inline-block; box-sizing:border-box; min-width:123px; padding:9px 12px 8px 12px; margin-left:5px; color:#333; font-weight:400; border:1px solid #ccc; font-size:15px; background:#fff; line-height:1; }
@@ -3444,9 +3483,9 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .membership_wrap .join_box_wrap .join_box_area .membership_box + .membership_box { border-left:1px solid #ccc; box-sizing:border-box; }
 /*.membership_wrap .join_box_wrap .join_box_area .membership_box + .membership_box .membership_box_title { padding-top:50px; }*/
 .membership_wrap .join_box_wrap .join_box_area .membership_box .membership_box_title { box-sizing:border-box; height:140px; padding-top:34px; font-size:16px; line-height:22px; color:#111; font-weight:500; }
-.membership_wrap .join_box_wrap .join_box_area .membership_box .membership_box_title.box_ico01 { background: url(../img/icon_membership_box01.png) no-repeat center bottom; background-size:48px 48px; }
-.membership_wrap .join_box_wrap .join_box_area .membership_box .membership_box_title.box_ico05 { background: url(../img/icon_membership_box07.png) no-repeat center bottom; background-size:48px 48px; }
-.membership_wrap .join_box_wrap .join_box_area .membership_box .membership_box_title.box_ico06 { background: url(../img/icon_membership_box08.png) no-repeat center bottom; background-size:48px 48px; }
+.membership_wrap .join_box_wrap .join_box_area .membership_box .membership_box_title.box_ico01 { background: url(../img/ico_membership_box01.png) no-repeat center bottom; background-size:48px 48px; }
+.membership_wrap .join_box_wrap .join_box_area .membership_box .membership_box_title.box_ico05 { background: url(../img/ico_membership_box07.png) no-repeat center bottom; background-size:48px 48px; }
+.membership_wrap .join_box_wrap .join_box_area .membership_box .membership_box_title.box_ico06 { background: url(../img/ico_membership_box08.png) no-repeat center bottom; background-size:48px 48px; }
 .membership_wrap .join_box_wrap .join_box_area .membership_box .btn_area { margin-top:10px; }
 .membership_wrap .join_box_wrap .join_box_area .membership_box .btn_area a { width:153px; font-weight:400; height:34px; border:0; line-height:34px; padding:0; }
 .membership_wrap + .dot_list { margin-top:13px; }
@@ -3586,8 +3625,8 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .member_find_wrap .id_find_wrap .id_find_area .id_find_box { width:33.3%; display:inline-block; vertical-align:top; float:left; height:244px; box-sizing:border-box; }
 .member_find_wrap .id_find_wrap .id_find_area .id_find_box + .id_find_box { border-left:1px solid #ccc; }
 .member_find_wrap .id_find_wrap .id_find_area .id_find_box .id_box_title { box-sizing:border-box; padding-top:38px; font-size:16px; line-height:22px; color:#111; font-weight:500; }
-.member_find_wrap .id_find_wrap .id_find_area .id_find_box .id_box_title.box_ico02 { height:111px; margin-bottom:10px; background:url("../img/icon_membership_box02.png") no-repeat center bottom; background-size:51px 47px; }
-.member_find_wrap .id_find_wrap .id_find_area .id_find_box .id_box_title.box_ico03 { height:111px; margin-bottom:10px; background:url("../img/icon_membership_box03.png") no-repeat 130px bottom; background-size:44px 48px; }
+.member_find_wrap .id_find_wrap .id_find_area .id_find_box .id_box_title.box_ico02 { height:111px; margin-bottom:10px; background:url("../img/ico_membership_box02.png") no-repeat center bottom; background-size:51px 47px; }
+.member_find_wrap .id_find_wrap .id_find_area .id_find_box .id_box_title.box_ico03 { height:111px; margin-bottom:10px; background:url("../img/ico_membership_box03.png") no-repeat 130px bottom; background-size:44px 48px; }
 .member_find_wrap .id_find_wrap .id_find_area .id_find_box .id_box_title.box_ico04 { height:auto; }
 .member_find_wrap .id_find_wrap .id_find_area .id_find_box .info_box_desc { font-size:15px; line-height:20px; font-weight:400; color:#333; }
 .member_find_wrap .id_find_wrap .id_find_area .id_find_box .btn_area { cursor:pointer; margin-top:10px; }
@@ -3748,11 +3787,12 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .membership_wrap .number_search_wrap .number_search_input td .input_area input { float:left; width:151px; height:34px; }
 .membership_wrap .number_search_wrap .number_search_input td .input_area .dash { display:block; float:left; width:10px; padding:0; line-height:34px; text-align:center; color:#666; }
 /* 비밀번호변경 */
-.divide_line { width:100%; height:3px; background:#ea638a; border:0; display:block; margin:0; padding:0; }
+.divide_line{width:100%; height:3px; background:#ea638a; border:0; display:block; margin:0; padding:0; }
 .divide_line + .popup_con .popup_title_desc { margin-top:15px; }
+.popup_con .popup_title_desc.type_2{font-size:15px; line-height:25px; color:#333;}
 .mypage_wrap .pw_wrap { width:100%; margin-top:16px; box-sizing:border-box; }
 .mypage_wrap .pw_wrap .pw_box_wrap { border:1px solid #ccc; box-sizing:border-box; height:auto; }
-.mypage_wrap .pw_wrap .pw_box_wrap .pw_box_area { width:311px; padding:38px 0 38px; margin:0 auto; }
+.mypage_wrap .pw_wrap .pw_box_wrap .pw_box_area{width:316px; padding:38px 0 38px; margin:0 auto; }
 .mypage_wrap .pw_wrap .pw_box_wrap .pw_box_area input { height:34px; }
 .mypage_wrap .pw_wrap .pw_box_wrap .pw_box_area .pw_box + .pw_box { margin-top:10px; }
 .mypage_wrap .pw_wrap .pw_box_wrap .pw_box_area  .pw_box + .btn_area a { width:100%; height:36px; padding:10px 15px 10px 15px; }
@@ -3767,17 +3807,18 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .mp_wrap2 .popup_title_desc strong { color:#111; font-weight:500; font-size:16px; line-height:26px; }
 .mp_wrap2 .popup_title_desc .dot_list { font-size:15px; margin-bottom:3px; }
 .mypage_wrap .agreement_area  { width:100%; margin:0 auto; }
-.mypage_wrap .agreement_area .agreement_box .agreement_txt { overflow-y:scroll; height:133px; padding:3px 9px; font-size:15px; line-height:20px; color:#333; font-weight:400; background:#f6f6f6; border:1px solid #ccc; box-sizing:border-box; }
+.mypage_wrap .agreement_area .agreement_box .agreement_txt_con{background:#f6f6f6; border:1px solid #ccc; padding:25px 25px 50px 25px;}
+.mypage_wrap .agreement_area .agreement_box .agreement_txt_con .agreement_txt { overflow-y:scroll; height:103px; font-size:16px; line-height:24px; color:#333; font-weight:300; padding:0; border:none; box-sizing:border-box; }
 .mypage_wrap .agreement_area .agreement_box .agreement_txt strong { font-weight:500; line-height:24px; }
-.mypage_wrap .agreement_area .agreement_box .agreement_txt p { line-height:20px; }
+.mypage_wrap .agreement_area .agreement_box .agreement_txt p { line-height:24px; }
 .mypage_wrap .agreement_area .agreement_box .agreement_radio_wrap:after {clear:both; display:block; content:'';}
-.mypage_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio { float:right; margin-top:9px; font-size:15px; }
+.mypage_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio { float:right; margin-top:11px; font-size:15px; }
 .mypage_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio:after { clear:both; display:block; content:''; }
 .mypage_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio { float:left; margin-left:10px; }
 .mypage_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio label { font-weight:400; }
 .mypage_wrap .agreement_area .agreement_box .agreement_radio_wrap .agreement_radio .input_radio:first-child { margin-left:0px; }
 .mp_wrap2 .membership_wrap { border:1px solid #ccc; padding:40px 0; margin-top:28px; }
-.mp_wrap2 .membership_wrap .login_box_wrap { width:311px; margin:0 auto; }
+.mp_wrap2 .membership_wrap .login_box_wrap{width:316px; margin:0 auto; }
 .mp_wrap2 .membership_wrap .login_box_wrap .login_box:first-child { margin-top:0; }
 .mp_wrap2 .membership_wrap .login_box_wrap .login_box { width:100%; margin-top:9px; }
 .mp_wrap2 .membership_wrap .login_box_wrap .login_box input { background:#f6f6f6; font-size:15px; height:34px; }
@@ -3801,7 +3842,7 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .mp_reserve_wrap .mpr_check_table table.table_type01 tbody tr { border-bottom:1px solid #d3d3d3; }
 .mp_reserve_wrap .mpr_check_table table.table_type01 tbody td .gray_btn { display:inline-block; font-size:15px; padding:0 10px; height:30px; line-height:30px; background:#aaa; border:0; cursor:pointer; color:#fff; font-weight:400; vertical-align:middle; margin-left:6px; }
 .mp_reserve_wrap .mpr_check_table table.table_type01 tbody td span.point { vertical-align:middle; }
-.mp_reserve_wrap .mpr_check_table .btn_area { position:absolute; bottom:-54px; right:0; }
+.mp_reserve_wrap .mpr_check_table .btn_area{position:absolute; bottom:-62px; right:0; }
 .mp_reserve_wrap .mpr_check_table .search_none { margin-top:30px; }
 .mp_reserve_wrap .mpr_check_table + .paging_wrap { margin-top:20px; }
 /* 건강상담현황 */
@@ -3818,12 +3859,12 @@ h2 + .medical_schedule_wrap { width:100%; margin-top:40px; }
 .mp_online_wrap .table_wrap .table_area .table_type01 thead th { height:34px; padding:0; color:#111; font-weight:500; text-align:center; vertical-align:middle; font-size:15px; box-sizing:border-box; }
 .mp_online_wrap .table_wrap .table_area .table_type01 tbody td { height:34px; padding:0; color:#333; font-weight:400; text-align:center; vertical-align:middle; font-size:15px; line-height:34px; box-sizing:border-box; }
 .mp_online_wrap .table_wrap .table_area .table_type01 tbody td a { font-weight:400; height:auto; line-height:inherit; }
-.mp_online_wrap .table_wrap .table_area .btn_area { position:absolute; bottom:-54px; right:0; }
+.mp_online_wrap .table_wrap .table_area .btn_area{position:absolute; bottom:-62px; right:0; }
 .mp_online_wrap .table_wrap + .paging_wrap { margin-top:20px; }
 /* 1:1 상담내역 */
 .mp_online_wrap .online_view { width:100%; margin:30px auto 0; }
 .mp_online_wrap .online_view .ov_wrap .ov_title { font-size:20px; color:#111; font-weight:500; padding-left:8px; height:auto; margin-bottom:19px; padding-bottom:9px; border-bottom:1px solid #dcdcdc; width:100%; line-height:30px; box-sizing:border-box; }
-.mp_online_wrap .online_view .ov_wrap .ov_title.lock { background:url("../img/icon_lock_big.png"); background-repeat:no-repeat; background-position:0 5px; padding-left:30px; }
+.mp_online_wrap .online_view .ov_wrap .ov_title.lock { background:url("../img/ico_lock_big.png"); background-repeat:no-repeat; background-position:0 5px; padding-left:30px;  background-size: 21px 21px;}
 .mp_online_wrap .online_view .ov_wrap .ov_sub { width:100%; padding-left:30px; box-sizing:border-box; }
 .mp_online_wrap .online_view .ov_wrap .ov_sub:after { clear:both; content:''; display:block; }
 .mp_online_wrap .online_view .ov_wrap .ov_sub li { float:left; font-weight:400; position:relative; margin-left:6px; padding-left:6px; font-size:15px; }

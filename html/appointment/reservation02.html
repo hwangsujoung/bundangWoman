@@ -65,6 +65,15 @@
                 }
                 $("#divPartList").find("input").prop("checked", false);
             });
+
+            $('.disease_list > li').on('click', function(){
+                for( var j=0; j<$('.input_radio_list_con > li').length; j++ ){
+                    if( $.trim($(this).text()) == $.trim($($('.input_radio_list_con').find('.input_radio_contents_title')[j]).text()) ){
+                        $('.input_radio_contents_con').scrollTop($($('.input_radio_list_con').find('> li')[j]).position().top+20);
+                        break;
+                    }
+                }
+            })
         })
     </script>
 </head>
@@ -87,40 +96,283 @@
                         </div>
 
                         <div class="step_con_area">
+
                             <div class="step_con on">
                                 <div class="popup_link_title_box">
-                                    <div class="popup_line_box on">
+                                    <div class="popup_line_box double on">
                                         <div class="popup_line_box_title">
                                             진료과 선택
                                         </div>
                                     </div>
+                                    <div class="popup_line_box double">
+                                        <div class="popup_line_box_title">
+                                            의료진 검색
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="divTabContent01 popup_line_box no_line mt0">
-                                    <div class="input_radio_area" id="divPartList">
-                                        <div class="input_radio">
-                                            <input type="radio" name="rbPartList" id="rdMd_1">
-                                            <label for="rdMd_1">난임센터</label>
-                                        </div>
-                                        <div class="input_radio">
-                                            <input type="radio" name="rbPartList" id="rdMd_2">
-                                            <label for="rdMd_2">산부인과</label>
-                                        </div>
-                                        <div class="input_radio">
-                                            <input type="radio" name="rbPartList" id="rdMd_3">
-                                            <label for="rdMd_3">산부인과3</label>
-                                        </div>
-                                        <div class="input_radio">
-                                            <input type="radio" name="rbPartList" id="rdMd_4">
-                                            <label for="rdMd_4">산부인과4</label>
-                                        </div>
-                                        <div class="input_radio">
-                                            <input type="radio" name="rbPartList" id="rdMd_5">
-                                            <label for="rdMd_5">산부인과5</label>
-                                        </div>
-                                        <div class="input_radio">
-                                            <input type="radio" name="rbPartList" id="rdMd_6">
-                                            <label for="rdMd_6">산부인6</label>
-                                        </div>
+                                    <ul class="tac disease_list">
+                                        <li>ㄱ</li>
+                                        <li>ㄴ</li>
+                                        <li>ㄷ</li>
+                                        <li>ㄹ</li>
+                                        <li>ㅁ</li>
+                                        <li>ㅂ</li>
+                                        <li>ㅅ</li>
+                                        <li>ㅇ</li>
+                                        <li>ㅈ</li>
+                                        <li>ㅊ</li>
+                                        <li>ㅋ</li>
+                                        <li>ㄱ</li>
+                                        <li>ㅍ</li>
+                                        <li>ㅎ</li>
+                                    </ul>
+                                    <div class="mt15 input_radio_contents_con">
+                                        <ul class="input_radio_list_con">
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㄱ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㄴ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㄷ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㄹ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㅁ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㅂ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㅅ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㅇ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="input_radio_contents_title">
+                                                    ㅈ
+                                                </div>
+                                                <div class="input_radio_contents_inner">
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                    <div class="input_radio">
+                                                        <input type="radio" name="rbPartList" id="rdMd_1">
+                                                        <label for="rdMd_1">난임센터</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="divTabContent02 popup_line_box no_line mt0">
